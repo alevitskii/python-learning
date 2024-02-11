@@ -13,10 +13,14 @@ class Solution:
         return candidate
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         [2, 2, 1, 1, 1, 2, 2],
     ]
     s = Solution()
     for nums in inputs:
         print(s.majorityElement(nums))
+
+
+if __name__ == "__main__":
+    main()

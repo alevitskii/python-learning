@@ -43,8 +43,12 @@ class Solution2:
         return result
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = ["23", "", "2"]
     s = Solution()
     for digits in inputs:
         print(s.letterCombinations(digits))
+
+
+if __name__ == "__main__":
+    main()

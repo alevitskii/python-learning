@@ -83,7 +83,7 @@ class Solution2:
         return -1
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         [
             [-1, -1, -1, -1, -1, -1],
@@ -100,3 +100,7 @@ if __name__ == "__main__":
     s = Solution2()
     for board in inputs:
         print(s.snakesAndLadders(board))
+
+
+if __name__ == "__main__":
+    main()

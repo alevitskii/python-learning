@@ -43,7 +43,7 @@ class Solution3:
         return dp[0]
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ("leetcode", ["leet", "code"]),
         ("applepenapple", ["apple", "pen"]),
@@ -53,3 +53,7 @@ if __name__ == "__main__":
     s = Solution3()
     for string, wordDict in inputs:
         print(s.wordBreak(string, wordDict))
+
+
+if __name__ == "__main__":
+    main()

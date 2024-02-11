@@ -22,7 +22,7 @@ class Solution2(object):
         return rn & mg == rn
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ("a", "b"),
         ("aa", "ab"),
@@ -31,3 +31,7 @@ if __name__ == "__main__":
     s = Solution2()
     for ransomNote, magazine in inputs:
         print(s.canConstruct(ransomNote, magazine))
+
+
+if __name__ == "__main__":
+    main()

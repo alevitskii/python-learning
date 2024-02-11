@@ -42,7 +42,7 @@ class Solution2:
         return len(res) == len(set(res))
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         [
             ["5", "3", ".", ".", "7", ".", ".", ".", "."],
@@ -70,3 +70,7 @@ if __name__ == "__main__":
     s = Solution2()
     for board in inputs:
         print(s.isValidSudoku(board))
+
+
+if __name__ == "__main__":
+    main()

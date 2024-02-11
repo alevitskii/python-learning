@@ -32,7 +32,7 @@ class Solution2:
         return max_depth
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         TreeNode(3, left=TreeNode(9), right=TreeNode(20, left=TreeNode(15), right=TreeNode(7))),
         TreeNode(1, right=TreeNode(2)),
@@ -41,3 +41,7 @@ if __name__ == "__main__":
     s = Solution2()
     for root in inputs:
         print(s.maxDepth(root))
+
+
+if __name__ == "__main__":
+    main()

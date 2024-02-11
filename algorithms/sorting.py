@@ -94,7 +94,23 @@ def quick_sort_left(nums):
     return quick_sort_left(nums[:pivot_index]) + [nums[pivot_index]] + quick_sort_left(nums[pivot_index + 1 :])
 
 
-if __name__ == "__main__":
+# if numbers 0..n, need to find missing number or sth
+def cyclic_sort(nums: list[int]) -> int:
+    i = 0
+    while i < len(nums):
+        if i != nums[i] and nums[i] < len(nums):
+            temp = nums[nums[i]]
+            nums[nums[i]] = nums[i]
+            nums[i] = temp
+        else:
+            i += 1
+    for i in range(len(nums)):
+        if nums[i] != i:
+            return i
+    return len(nums)
+
+
+def main() -> None:
     # array = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0]
     # bubble_sort(array)
     # print(array)
@@ -112,3 +128,7 @@ if __name__ == "__main__":
     array = [99, 0, 6, 2, 1, 5, 63, 87, 283, 4, 44]
     print(quick_sort_right(array))
     print(quick_sort_left(array))
+
+
+if __name__ == "__main__":
+    main()

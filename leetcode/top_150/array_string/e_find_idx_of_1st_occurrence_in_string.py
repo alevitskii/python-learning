@@ -13,7 +13,7 @@ class Solution:
         return -1
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ("sadbutsad", "sad"),
         ("leetcode", "code"),
@@ -23,3 +23,7 @@ if __name__ == "__main__":
     s = Solution()
     for haystack, needle in inputs:
         print(s.strStr(haystack, needle))
+
+
+if __name__ == "__main__":
+    main()

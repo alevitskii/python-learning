@@ -19,7 +19,7 @@ class Solution:
         return stored_water
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1],
         [4, 2, 0, 3, 2, 5],
@@ -28,3 +28,7 @@ if __name__ == "__main__":
     s = Solution()
     for height in inputs:
         print(s.trap(height))
+
+
+if __name__ == "__main__":
+    main()

@@ -14,8 +14,12 @@ class Solution:
         return current[-1]
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [[[0, 0, 0], [0, 1, 0], [0, 0, 0]], [[0, 1], [0, 0]], [[0, 0], [0, 1]], [[0, 1], [1, 0]]]
     s = Solution()
     for obstacleGrid in inputs:
         print(s.uniquePathsWithObstacles(obstacleGrid))
+
+
+if __name__ == "__main__":
+    main()

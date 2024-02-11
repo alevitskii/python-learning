@@ -28,7 +28,7 @@ class RandomizedSet:
         return self._list[idx]
 
 
-if __name__ == "__main__":
+def main() -> None:
     rand_set = RandomizedSet()
     print(rand_set.insert(1))
     print(rand_set.remove(2))
@@ -37,3 +37,7 @@ if __name__ == "__main__":
     print(rand_set.remove(1))
     print(rand_set.insert(2))
     print(rand_set.getRandom())
+
+
+if __name__ == "__main__":
+    main()

@@ -33,7 +33,7 @@ class Solution2:
         return dp[0][0]
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ("aabcc", "dbbca", "aadbbcbcac"),
         ("aabccaabccaabcc", "dbbcadbbcadbbcadbbca", "aadbbcbcacaadbbcbcacaadbbcbcacaadbbcbcac"),
@@ -44,3 +44,7 @@ if __name__ == "__main__":
     s = Solution2()
     for s1, s2, s3 in inputs:
         print(s.isInterleave(s1, s2, s3))
+
+
+if __name__ == "__main__":
+    main()

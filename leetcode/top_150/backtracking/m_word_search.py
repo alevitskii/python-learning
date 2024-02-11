@@ -72,7 +72,7 @@ class Solution2:
         return False
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ([["A", "B", "C", "E"], ["S", "F", "C", "S"], ["A", "D", "E", "E"]], "ABCCED"),
         ([["A", "B", "C", "E"], ["S", "F", "C", "S"], ["A", "D", "E", "E"]], "SEE"),
@@ -82,3 +82,7 @@ if __name__ == "__main__":
     s = Solution2()
     for board, word in inputs:
         print(s.exist(board, word))
+
+
+if __name__ == "__main__":
+    main()

@@ -70,11 +70,15 @@ class SolutionDP:
         return mat
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         [[0, 0, 0], [0, 1, 0], [0, 0, 0]],
         [[0, 0, 0], [0, 1, 0], [1, 1, 1]],
     ]
-    s = SolutionDP()
+    s = SolutionBFS()
     for mat in inputs:
         print(s.updateMatrix(mat))
+
+
+if __name__ == "__main__":
+    main()

@@ -21,7 +21,7 @@ class Solution2:
         return lookup_table[n]
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         2,
         3,
@@ -29,3 +29,7 @@ if __name__ == "__main__":
     s = Solution2()
     for n in inputs:
         print(s.climbStairs(n))
+
+
+if __name__ == "__main__":
+    main()

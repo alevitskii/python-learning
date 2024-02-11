@@ -31,7 +31,7 @@ class Solution:
         return result
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ([["a", "b"], ["b", "c"]], [2.0, 3.0], [["a", "c"], ["b", "a"], ["a", "e"], ["a", "a"], ["x", "x"]]),
         ([["a", "b"], ["b", "c"], ["bc", "cd"]], [1.5, 2.5, 5.0], [["a", "c"], ["c", "b"], ["bc", "cd"], ["cd", "bc"]]),
@@ -46,3 +46,7 @@ if __name__ == "__main__":
     s = Solution()
     for equations, values, queries in inputs:
         print(s.calcEquation(equations, values, queries))
+
+
+if __name__ == "__main__":
+    main()

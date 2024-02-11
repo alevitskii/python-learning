@@ -45,7 +45,7 @@ class Solution2:
         return " ".join(s.split()[::-1])
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         "the sky is blue",
         "  hello world  ",
@@ -54,3 +54,7 @@ if __name__ == "__main__":
     s = Solution2()
     for string in inputs:
         print(s.reverseWords(string))
+
+
+if __name__ == "__main__":
+    main()

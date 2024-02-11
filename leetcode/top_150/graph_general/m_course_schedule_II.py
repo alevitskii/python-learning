@@ -22,7 +22,7 @@ class Solution:
         return result if (stack == [] and numCourses == 0) else []
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ([[1, 0]], 2),
         ([[1, 0], [2, 0], [3, 1], [3, 2]], 4),
@@ -32,3 +32,7 @@ if __name__ == "__main__":
     s = Solution()
     for prerequisites, numCourses in inputs:
         print(s.findOrder(numCourses, prerequisites))
+
+
+if __name__ == "__main__":
+    main()

@@ -41,7 +41,7 @@ class Solution4:
         return result
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         (3, 7),
         (3, 2),
@@ -51,3 +51,7 @@ if __name__ == "__main__":
     s = Solution2()
     for m, n in inputs:
         print(s.uniquePaths(m, n))
+
+
+if __name__ == "__main__":
+    main()

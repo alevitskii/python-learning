@@ -24,7 +24,7 @@ class Solution:
         return leaves
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         (2, [[0, 1]]),
         (1, []),
@@ -36,3 +36,7 @@ if __name__ == "__main__":
     s = Solution()
     for n, edges in inputs:
         print(s.findMinHeightTrees(n, edges))
+
+
+if __name__ == "__main__":
+    main()

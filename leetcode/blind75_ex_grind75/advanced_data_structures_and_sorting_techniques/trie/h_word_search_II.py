@@ -1,9 +1,6 @@
-from typing import Dict, List
-
-
 class TrieNode:
     def __init__(self):
-        self.children: Dict[str, TrieNode] = {}
+        self.children: dict[str, TrieNode] = {}
         self.is_string: bool = False
 
 
@@ -70,7 +67,7 @@ class Solution:
                     self.dfs(words_trie, child, grid, row + row_offset, col + col_offset, result, word)
                 grid[row][col] = char
 
-    def findWords(self, board: List[List[str]], words: List[str]) -> List[str]:
+    def findWords(self, board: list[list[str]], words: list[str]) -> list[str]:
         trie_for_words = Trie()
         result = []
         for word in words:
@@ -81,7 +78,7 @@ class Solution:
         return result
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         # ([["o", "a", "a", "n"],
         #   ["e", "t", "a", "e"],
@@ -99,3 +96,7 @@ if __name__ == "__main__":
     s = Solution()
     for board, words in inputs:
         print(s.findWords(board, words))
+
+
+if __name__ == "__main__":
+    main()

@@ -24,7 +24,7 @@ class Graph:
             print(node + " --> " + connections)
 
 
-if __name__ == "__main__":
+def main() -> None:
     graph = Graph()
     graph.add_vertex("0")
     graph.add_vertex("1")
@@ -43,3 +43,7 @@ if __name__ == "__main__":
     graph.add_edge("6", "5")
 
     graph.show_connections()
+
+
+if __name__ == "__main__":
+    main()

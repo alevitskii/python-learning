@@ -74,7 +74,7 @@ class Solution4:
         return dp[len(nums) - 1][subset_sum]
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         # [1, 5, 11, 5],
         # [1, 2, 3, 5],
@@ -83,3 +83,7 @@ if __name__ == "__main__":
     s = Solution3()
     for string in inputs:
         print(s.canPartition(string))
+
+
+if __name__ == "__main__":
+    main()

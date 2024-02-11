@@ -12,7 +12,7 @@ class Solution:
         return length
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         "HelloWorld",
         "   fly me   to   the moon  ",
@@ -21,3 +21,7 @@ if __name__ == "__main__":
     s = Solution()
     for string in inputs:
         print(s.lengthOfLastWord(string))
+
+
+if __name__ == "__main__":
+    main()

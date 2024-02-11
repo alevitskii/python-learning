@@ -13,17 +13,17 @@ class Solution:
     def copyRandomList(self, head: Optional[Node]) -> Optional[Node]:
         if not head:
             return None
-        map_ = {}
+        old_to_new = {}
         node = head
         while node:
-            map_[node] = Node(node.val)
+            old_to_new[node] = Node(node.val)
             node = node.next
         node = head
         while node:
-            map_[node].next = map_.get(node.next)
-            map_[node].random = map_.get(node.random)
+            old_to_new[node].next = old_to_new[node.next] if node.next is not None else None
+            old_to_new[node].random = old_to_new[node.random] if node.random is not None else None
             node = node.next
-        return map_[head]
+        return old_to_new[head]
 
 
 class Solution2:
@@ -77,7 +77,7 @@ class Solution3:
         return newNode
 
 
-if __name__ == "__main__":
+def main() -> None:
     node1 = Node(7)
     node2 = Node(13)
     node3 = Node(11)
@@ -95,3 +95,7 @@ if __name__ == "__main__":
     s = Solution2()
     for head in inputs:
         print(s.copyRandomList(head))
+
+
+if __name__ == "__main__":
+    main()

@@ -52,8 +52,12 @@ class Solution2:
         return False
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [([2, 5, 6, 0, 0, 1, 2], 0), ([2, 5, 6, 0, 0, 1, 2], 3), ([1, 0, 1, 1, 1], 0), ([3, 1], 1)]
     s = Solution2()
     for nums, target in inputs:
         print(s.search(nums, target))
+
+
+if __name__ == "__main__":
+    main()

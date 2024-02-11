@@ -19,8 +19,12 @@ class Solution:
         return nums[left]
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [[3, 4, 5, 1, 2], [4, 5, 6, 7, 0, 1, 2], [7, 8, 9, 0, 1, 2, 3, 4], [11, 13, 15, 17], [5, 1, 2, 3, 4]]
     s = Solution()
     for nums in inputs:
         print(s.findMin(nums))
+
+
+if __name__ == "__main__":
+    main()

@@ -13,8 +13,12 @@ class Solution:
         return not stack
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = ["()", "()[]{}", "(]", "]"]
     s = Solution()
     for string in inputs:
         print(s.isValid(string))
+
+
+if __name__ == "__main__":
+    main()

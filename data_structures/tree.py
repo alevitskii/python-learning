@@ -100,7 +100,7 @@ class BinarySearchTree:
                 return
 
 
-if __name__ == "__main__":
+def main() -> None:
     tree = BinarySearchTree()
     tree.insert(9)
     tree.insert(4)
@@ -117,3 +117,7 @@ if __name__ == "__main__":
 
     tree.remove(170)
     print(json.dumps(traverse(tree.root), indent=3))
+
+
+if __name__ == "__main__":
+    main()

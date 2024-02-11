@@ -40,7 +40,7 @@ class Solution2:
         return helper(0, n - 1)
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ([9, 3, 15, 20, 7], [9, 15, 7, 20, 3]),
         ([-1], [-1]),
@@ -49,3 +49,7 @@ if __name__ == "__main__":
     for inorder, postorder in inputs:
         root = s.buildTree(inorder, postorder)
         print(root)
+
+
+if __name__ == "__main__":
+    main()

@@ -28,7 +28,7 @@ class Solution2:
         return max(nums[0], rob2_x1st, rob2_xlast)
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         [2, 3, 2],
         [1, 2, 3, 1],
@@ -40,3 +40,7 @@ if __name__ == "__main__":
     s = Solution2()
     for nums in inputs:
         print(s.rob(nums))
+
+
+if __name__ == "__main__":
+    main()

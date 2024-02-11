@@ -29,7 +29,7 @@ class Solution:
         return result
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         TreeNode(val=3, left=TreeNode(val=9), right=TreeNode(val=20, left=TreeNode(val=15), right=TreeNode(val=7))),
         TreeNode(val=3, left=TreeNode(val=9, left=TreeNode(val=15), right=TreeNode(val=7)), right=TreeNode(val=20)),
@@ -37,3 +37,7 @@ if __name__ == "__main__":
     s = Solution()
     for root in inputs:
         print(s.averageOfLevels(root))
+
+
+if __name__ == "__main__":
+    main()

@@ -22,8 +22,12 @@ class Solution01:
         return h
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [[3, 0, 6, 1, 5], [1, 3, 1], [5]]
     s = Solution01()
     for citations in inputs:
         print(s.hIndex(citations))
+
+
+if __name__ == "__main__":
+    main()

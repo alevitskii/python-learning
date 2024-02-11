@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def pacificAtlantic(self, heights: List[List[int]]) -> List[List[int]]:
+    def pacificAtlantic(self, heights: list[list[int]]) -> list[list[int]]:
         def dfs(row, col, reach):
             reach.add((row, col))
             for x, y in [(1, 0), (0, 1), (-1, 0), (0, -1)]:  # Check all 4 directions
@@ -27,7 +24,7 @@ class Solution:
         return list(pacific_reach.intersection(atlantic_reach))
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         [
             [1, 2, 2, 3, 5],
@@ -42,3 +39,7 @@ if __name__ == "__main__":
     s = Solution()
     for heights in inputs:
         print(s.pacificAtlantic(heights))
+
+
+if __name__ == "__main__":
+    main()

@@ -18,7 +18,7 @@ class Solution:
         return False
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         (
             TreeNode(val=1, left=TreeNode(val=2), right=TreeNode(val=3)),
@@ -32,3 +32,7 @@ if __name__ == "__main__":
     s = Solution()
     for p, q in inputs:
         print(s.isSameTree(p, q))
+
+
+if __name__ == "__main__":
+    main()

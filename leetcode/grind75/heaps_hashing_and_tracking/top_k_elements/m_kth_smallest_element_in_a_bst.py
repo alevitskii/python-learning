@@ -42,7 +42,7 @@ class Solution2:
         return heapq.nsmallest(k, heap)[-1]
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         (TreeNode(3, left=TreeNode(1, right=TreeNode(2)), right=TreeNode(4)), 1),
         (TreeNode(5, left=TreeNode(3, left=TreeNode(2, left=TreeNode(1)), right=TreeNode(4)), right=TreeNode(6)), 3),
@@ -50,3 +50,7 @@ if __name__ == "__main__":
     s = Solution()
     for root, k in inputs:
         print(s.kthSmallest(root, k))
+
+
+if __name__ == "__main__":
+    main()

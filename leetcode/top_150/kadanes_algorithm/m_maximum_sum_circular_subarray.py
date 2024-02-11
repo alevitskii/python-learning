@@ -16,7 +16,7 @@ class Solution:
         return max(maxs, total - mins) if maxs > 0 else maxs
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         [1, -2, 3, -2],
         [5, -3, 5],
@@ -25,3 +25,7 @@ if __name__ == "__main__":
     s = Solution()
     for nums in inputs:
         print(s.maxSubarraySumCircular(nums))
+
+
+if __name__ == "__main__":
+    main()

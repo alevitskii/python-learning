@@ -26,7 +26,7 @@ class Solution2:
         return max(result)
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         # [10, 9, 2, 5, 3, 7, 101, 18],
         # [0, 1, 0, 3, 2, 3],
@@ -37,3 +37,7 @@ if __name__ == "__main__":
     s = Solution()
     for nums in inputs:
         print(s.lengthOfLIS(nums))
+
+
+if __name__ == "__main__":
+    main()

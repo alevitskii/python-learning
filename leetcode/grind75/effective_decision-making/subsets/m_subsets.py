@@ -21,9 +21,9 @@ class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
         subsets = []
         subsets_count = 2 ** len(nums)
-        for i in range(0, subsets_count):
+        for i in range(subsets_count):
             subset = set()
-            for j in range(0, len(nums)):
+            for j in range(len(nums)):
                 if self.get_bit(i, j) and nums[j] not in subset:
                     subset.add(nums[j])
             subsets.append(list(subset))
@@ -35,18 +35,22 @@ class Solution2:
         subsets = [[]]
         for num in nums:
             for i in range(len(subsets)):
-                new_subset = list(subsets[i])
+                new_subset = subsets[i].copy()
                 new_subset.append(num)
                 subsets.append(new_subset)
         return subsets
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         [1, 2, 3],
         [0],
         [],
     ]
-    s = Solution2()
+    s = Solution()
     for nums in inputs:
         print(s.subsets(nums))
+
+
+if __name__ == "__main__":
+    main()

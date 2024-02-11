@@ -36,7 +36,7 @@ class Solution2:
         return result
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         3,
         # 1,
@@ -44,3 +44,7 @@ if __name__ == "__main__":
     s = Solution()
     for n in inputs:
         print(s.generateParenthesis(n))
+
+
+if __name__ == "__main__":
+    main()

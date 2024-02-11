@@ -27,7 +27,7 @@ class Solution:
         return result
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         TreeNode(val=1, left=TreeNode(val=2, right=TreeNode(val=5)), right=TreeNode(val=3, right=TreeNode(val=4))),
         TreeNode(val=1, right=TreeNode(val=3)),
@@ -36,3 +36,7 @@ if __name__ == "__main__":
     s = Solution()
     for root in inputs:
         print(s.rightSideView(root))
+
+
+if __name__ == "__main__":
+    main()

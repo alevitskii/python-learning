@@ -28,10 +28,10 @@ class Solution:
 class Solution2:
     def wordPattern(self, pattern: str, s: str) -> bool:
         s = s.split()
-        return [*map(pattern.index, pattern)] == [*map(s.index, s)]
+        return list(map(pattern.index, pattern)) == list(map(s.index, s))
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ("abba", "dog cat cat dog"),
         ("abba", "dog cat cat fish"),
@@ -42,3 +42,7 @@ if __name__ == "__main__":
     s = Solution()
     for pattern, string in inputs:
         print(s.wordPattern(pattern, string))
+
+
+if __name__ == "__main__":
+    main()

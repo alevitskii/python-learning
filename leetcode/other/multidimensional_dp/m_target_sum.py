@@ -15,7 +15,7 @@ class Solution:
         return backtrack(0, 0)
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ([1, 1, 1, 1, 1], 3),
         ([1], 1),
@@ -23,3 +23,7 @@ if __name__ == "__main__":
     s = Solution()
     for nums, target in inputs:
         print(s.findTargetSumWays(nums, target))
+
+
+if __name__ == "__main__":
+    main()

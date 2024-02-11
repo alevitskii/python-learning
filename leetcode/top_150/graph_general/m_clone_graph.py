@@ -20,7 +20,7 @@ class Solution:
         return dfs(node, {})
 
 
-if __name__ == "__main__":
+def main() -> None:
     node11 = Node(1)
     node12 = Node(2)
     node13 = Node(3)
@@ -37,3 +37,7 @@ if __name__ == "__main__":
     for node in inputs:
         new_node = s.cloneGraph(node)
         print(new_node)
+
+
+if __name__ == "__main__":
+    main()

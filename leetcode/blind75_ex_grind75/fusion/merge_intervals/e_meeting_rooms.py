@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def meet(self, intervals: List[List[int]]) -> int:
+    def meet(self, intervals: list[list[int]]) -> int:
         if not intervals:
             return True
         intervals.sort(key=lambda i: i[0])
@@ -15,7 +12,7 @@ class Solution:
 
 
 class Solution2:
-    def meet(self, intervals: List[List[int]]) -> int:
+    def meet(self, intervals: list[list[int]]) -> int:
         intervals.sort(key=lambda i: i[0])
         for i in range(1, len(intervals)):
             if intervals[i - 1][1] > intervals[i][0]:
@@ -23,7 +20,7 @@ class Solution2:
         return True
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         [[1, 2], [4, 6], [6, 8], [9, 12]],
         [[1, 5], [4, 6], [6, 8], [9, 12]],
@@ -34,3 +31,7 @@ if __name__ == "__main__":
     s = Solution()
     for intervals in inputs:
         print(s.meet(intervals))
+
+
+if __name__ == "__main__":
+    main()

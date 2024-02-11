@@ -11,10 +11,22 @@ class TreeNode:
 
 class Solution:
     def countNodes(self, root: Optional[TreeNode]) -> int:
-        pass
+        if not root:
+            return 0
+        left, right = root, root
+        left_height, right_height = 0, 0
+        while left:
+            left_height += 1
+            left = left.left
+        while right:
+            right_height += 1
+            right = right.right
+        if left_height == right_height:  # Root is a complete tree
+            return pow(2, left_height) - 1
+        return 1 + self.countNodes(root.left) + self.countNodes(root.right)
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         TreeNode(
             val=1,
@@ -25,3 +37,7 @@ if __name__ == "__main__":
     s = Solution()
     for root in inputs:
         print(s.countNodes(root))
+
+
+if __name__ == "__main__":
+    main()

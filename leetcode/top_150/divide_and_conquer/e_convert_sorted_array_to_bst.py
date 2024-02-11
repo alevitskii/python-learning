@@ -24,9 +24,13 @@ class Solution:
         return construct(nums, 0, len(nums) - 1)
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [[-10, -3, 0, 5, 9], [1, 3]]
     s = Solution()
     for nums in inputs:
         root = s.sortedArrayToBST(nums)
         print(root)
+
+
+if __name__ == "__main__":
+    main()

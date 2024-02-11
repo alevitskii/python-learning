@@ -137,7 +137,7 @@ class WordDictionary2:
         return words_list
 
 
-if __name__ == "__main__":
+def main() -> None:
     wordDictionary = WordDictionary2()
     wordDictionary.addWord("bad")
     wordDictionary.addWord("dad")
@@ -146,3 +146,7 @@ if __name__ == "__main__":
     print(wordDictionary.search("bad"))  # return True
     print(wordDictionary.search(".ad"))  # return True
     print(wordDictionary.search("b.."))  # return True
+
+
+if __name__ == "__main__":
+    main()

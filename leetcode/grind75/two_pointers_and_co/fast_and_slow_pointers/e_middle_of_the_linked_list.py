@@ -19,7 +19,7 @@ class Solution:
         return slow
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5))))),
         ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5, ListNode(6)))))),
@@ -28,3 +28,7 @@ if __name__ == "__main__":
     s = Solution()
     for head in inputs:
         print(s.middleNode(head))
+
+
+if __name__ == "__main__":
+    main()

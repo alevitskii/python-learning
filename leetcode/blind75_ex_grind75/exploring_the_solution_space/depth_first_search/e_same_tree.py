@@ -1,6 +1,3 @@
-from typing import Optional
-
-
 # Definition for a binary tree node.
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
@@ -10,7 +7,7 @@ class TreeNode:
 
 
 class Solution:
-    def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> int:
+    def isSameTree(self, p: TreeNode | None, q: TreeNode | None) -> int:
         if p is None and q is None:
             return True
         elif p is not None and q is not None and p.val == q.val:
@@ -18,7 +15,7 @@ class Solution:
         return False
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         (
             TreeNode(val=1, left=TreeNode(val=2), right=TreeNode(val=3)),
@@ -32,3 +29,7 @@ if __name__ == "__main__":
     s = Solution()
     for p, q in inputs:
         print(s.isSameTree(p, q))
+
+
+if __name__ == "__main__":
+    main()

@@ -39,7 +39,7 @@ class Solution:
                             board[fr][fc] = "X"
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         [["X", "X", "X", "X"], ["X", "O", "O", "X"], ["X", "X", "O", "X"], ["X", "O", "X", "X"]],
         [["X", "X", "X", "X"], ["X", "X", "X", "X"], ["X", "X", "X", "X"], ["X", "O", "X", "X"]],
@@ -50,3 +50,7 @@ if __name__ == "__main__":
     for board in inputs:
         s.solve(board)
         print(board)
+
+
+if __name__ == "__main__":
+    main()

@@ -14,10 +14,14 @@ class Solution:
         return max(self.maxDepth(root.left) + 1, self.maxDepth(root.right) + 1) if root else 0
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         TreeNode(val=3, left=TreeNode(val=9), right=TreeNode(val=20, left=TreeNode(15), right=TreeNode(7))),
     ]
     s = Solution()
     for head in inputs:
         print(s.maxDepth(head))
+
+
+if __name__ == "__main__":
+    main()

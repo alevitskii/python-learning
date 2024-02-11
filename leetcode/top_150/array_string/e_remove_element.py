@@ -30,10 +30,14 @@ class Solution2:
         return idx
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [([0, 1, 2, 2, 3, 0, 4, 2], 2)]  # [0, 1, 4, 0, 3, _, _, _], 5
     s = Solution()
     s2 = Solution2()
     for nums, val in inputs:
         print(s2.removeElement(nums, val))
         print(nums)
+
+
+if __name__ == "__main__":
+    main()

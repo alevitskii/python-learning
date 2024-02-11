@@ -51,7 +51,7 @@ class Solution2:
         return matrix
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         # [[1, 1, 1],
         #  [1, 0, 1],
@@ -65,3 +65,7 @@ if __name__ == "__main__":
     for matrix in inputs:
         print(s.setZeroes(matrix))
         print(matrix)
+
+
+if __name__ == "__main__":
+    main()

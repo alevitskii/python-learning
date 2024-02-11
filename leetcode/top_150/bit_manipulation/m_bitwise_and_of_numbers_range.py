@@ -17,13 +17,17 @@ class Solution:
         return left << shift
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         (5, 7),
-        (0, 0),
-        (1, 2147483647),
-        (600000000, 2147483645),
+        # (0, 0),
+        # (1, 2147483647),
+        # (600000000, 2147483645),
     ]
     s = Solution()
     for left, right in inputs:
         print(s.rangeBitwiseAnd(left, right))
+
+
+if __name__ == "__main__":
+    main()

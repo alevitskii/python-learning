@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def setZeroes(self, matrix: List[List[int]]) -> None:
+    def setZeroes(self, matrix: list[list[int | None]]) -> None:
         m, n = len(matrix), len(matrix[0])
         for i in range(m):
             for j in range(n):
@@ -21,7 +18,7 @@ class Solution:
 
 
 class Solution2:
-    def setZeroes(self, matrix: List[List[int]]) -> None:
+    def setZeroes(self, matrix: list[list[int]]) -> None:
         rows, cols = len(matrix), len(matrix[0])
         fcol, frow = False, False
         for i in range(rows):
@@ -48,10 +45,9 @@ class Solution2:
         if frow:
             for j in range(cols):
                 matrix[0][j] = 0
-        return matrix
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         # [[1, 1, 1],
         #  [1, 0, 1],
@@ -63,5 +59,9 @@ if __name__ == "__main__":
     ]
     s = Solution2()
     for matrix in inputs:
-        print(s.setZeroes(matrix))
+        s.setZeroes(matrix)
         print(matrix)
+
+
+if __name__ == "__main__":
+    main()

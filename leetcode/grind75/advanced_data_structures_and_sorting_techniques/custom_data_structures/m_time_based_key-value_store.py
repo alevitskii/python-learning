@@ -68,7 +68,7 @@ class TimeMap2:
             return ""
 
 
-if __name__ == "__main__":
+def main() -> None:
     time_map = TimeMap()
     time_map.set("foo", "bar", 1)
     print(time_map.get("foo", 1))
@@ -78,3 +78,7 @@ if __name__ == "__main__":
     print(time_map.get("foo", 5))
     print(time_map.get("foo", 3))
     print(time_map.get("foo", 0))
+
+
+if __name__ == "__main__":
+    main()

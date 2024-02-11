@@ -28,7 +28,24 @@ class Solution:
             return self.flatten(root.right)
 
 
-if __name__ == "__main__":
+class Solution2:
+    def __init__(self) -> None:
+        self.prev = None
+
+    def flatten(self, root: Optional[TreeNode]) -> None:
+        """
+        Do not return anything, modify root in-place instead.
+        """
+        if not root:
+            return
+        self.flatten(root.right)  # Recursively flatten the right subtree
+        self.flatten(root.left)  # Recursively flatten the left subtree
+        root.right = self.prev  # Set the right child to the previously flattened node
+        root.left = None  # Set the left child to None
+        self.prev = root  # Update the previously flattened node to be the current node
+
+
+def main() -> None:
     inputs = [
         TreeNode(
             val=1,
@@ -45,7 +62,11 @@ if __name__ == "__main__":
         TreeNode(val=1, left=TreeNode(val=2, left=TreeNode(val=3))),
         None,
     ]
-    s = Solution()
+    s = Solution2()
     for root in inputs:
         s.flatten(root)
         print(root)
+
+
+if __name__ == "__main__":
+    main()

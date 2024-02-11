@@ -56,7 +56,7 @@ class BSTIterator2:
         return self.nxt is not None
 
 
-if __name__ == "__main__":
+def main() -> None:
     root = TreeNode(val=7, left=TreeNode(val=3), right=TreeNode(val=15, left=TreeNode(val=9), right=TreeNode(val=20)))
     bSTIterator = BSTIterator(root)
     print(bSTIterator.next())  # return 3
@@ -68,3 +68,7 @@ if __name__ == "__main__":
     print(bSTIterator.hasNext())  # return True
     print(bSTIterator.next())  # return 20
     print(bSTIterator.hasNext())  # return False
+
+
+if __name__ == "__main__":
+    main()

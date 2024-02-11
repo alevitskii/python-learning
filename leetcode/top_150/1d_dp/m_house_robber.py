@@ -12,7 +12,7 @@ class Solution:
         return nums[-1] if len(nums) > 2 else max(nums)
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         # [1, 2, 3, 1],
         # [2, 7, 9, 3, 1],
@@ -24,3 +24,7 @@ if __name__ == "__main__":
     s = Solution()
     for nums in inputs:
         print(s.rob(nums))
+
+
+if __name__ == "__main__":
+    main()

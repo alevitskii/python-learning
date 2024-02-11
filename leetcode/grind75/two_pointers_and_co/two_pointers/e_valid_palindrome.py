@@ -36,9 +36,13 @@ class Solution2:
         return s == s[::-1]
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = ["A man, a plan, a canal: Panama", "race a car", " "]
 
     s = Solution2()
     for string in inputs:
         print(s.isPalindrome(string))
+
+
+if __name__ == "__main__":
+    main()

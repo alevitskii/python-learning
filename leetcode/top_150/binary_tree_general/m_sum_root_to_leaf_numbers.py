@@ -21,7 +21,7 @@ class Solution:
         return total
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         TreeNode(val=1, left=TreeNode(val=2), right=TreeNode(val=3)),
         TreeNode(
@@ -40,3 +40,7 @@ if __name__ == "__main__":
     s = Solution()
     for root in inputs:
         print(s.sumNumbers(root))
+
+
+if __name__ == "__main__":
+    main()

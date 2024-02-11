@@ -8,7 +8,7 @@ class Solution:
         left, right = 1, n
 
         while left < right:
-            center = (left + left) >> 1
+            center = (left + right) >> 1
             if self.isBadVersion(center):
                 right = center
             else:
@@ -16,7 +16,7 @@ class Solution:
         return left
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         (5, 4),
         (1, 1),
@@ -25,3 +25,7 @@ if __name__ == "__main__":
     s = Solution()
     for n, bad in inputs:
         print(s.firstBadVersion(n, bad))
+
+
+if __name__ == "__main__":
+    main()

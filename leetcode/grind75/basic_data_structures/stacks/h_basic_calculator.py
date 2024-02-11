@@ -26,7 +26,7 @@ class Solution:
         return result + number * sign_value
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         "1 + 1",
         " 2-1 + 2 ",
@@ -35,3 +35,7 @@ if __name__ == "__main__":
     s = Solution()
     for string in inputs:
         print(s.calculate(string))
+
+
+if __name__ == "__main__":
+    main()

@@ -63,7 +63,7 @@ class Solution3:
         return rside
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         TreeNode(
             1,
@@ -77,3 +77,7 @@ if __name__ == "__main__":
     s = Solution3()
     for root in inputs:
         print(s.rightSideView(root))
+
+
+if __name__ == "__main__":
+    main()

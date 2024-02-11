@@ -12,8 +12,12 @@ class Solution:
         return [1] + digits
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [[1, 2, 3], [4, 3, 2, 1], [9], [9, 9, 9]]
     s = Solution()
     for digits in inputs:
         print(s.plusOne(digits))
+
+
+if __name__ == "__main__":
+    main()

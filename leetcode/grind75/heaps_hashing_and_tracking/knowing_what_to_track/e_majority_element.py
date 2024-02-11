@@ -5,7 +5,7 @@ from typing import List
 # Boyer-Moore’s voting algorithm
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
-        candidate = None
+        candidate = -1
         count = 0
         for n in nums:
             if count == 0:
@@ -22,7 +22,7 @@ class Solution2:
         return max(records.keys(), key=records.get)
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         [3, 2, 3],
         [2, 2, 1, 1, 1, 2, 2],
@@ -30,3 +30,7 @@ if __name__ == "__main__":
     s = Solution()
     for nums in inputs:
         print(s.majorityElement(nums))
+
+
+if __name__ == "__main__":
+    main()

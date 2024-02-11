@@ -21,7 +21,7 @@ class Solution:
         return issym(root.left, root.right)
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         TreeNode(
             val=1,
@@ -33,3 +33,7 @@ if __name__ == "__main__":
     s = Solution()
     for root in inputs:
         print(s.isSymmetric(root))
+
+
+if __name__ == "__main__":
+    main()

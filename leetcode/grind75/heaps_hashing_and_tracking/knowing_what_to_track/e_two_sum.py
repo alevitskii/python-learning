@@ -9,7 +9,7 @@ class Solution:
         return
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ([2, 7, 11, 15], 9),
         ([3, 2, 4], 6),
@@ -18,3 +18,7 @@ if __name__ == "__main__":
     s = Solution()
     for nums, target in inputs:
         print(s.twoSum(nums, target))
+
+
+if __name__ == "__main__":
+    main()

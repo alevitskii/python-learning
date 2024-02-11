@@ -1,10 +1,9 @@
 import heapq
 from collections import defaultdict
-from typing import List
 
 
 class Solution:
-    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+    def topKFrequent(self, nums: list[int], k: int) -> list[int]:
         f = defaultdict(int)
         for n in nums:
             f[n] += 1
@@ -19,7 +18,7 @@ class Solution:
 
 
 class Solution2:
-    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+    def topKFrequent(self, nums: list[int], k: int) -> list[int]:
         f = defaultdict(int)
         for n in nums:
             f[n] += 1
@@ -31,8 +30,12 @@ class Solution2:
         return [n for _, n in heap]
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [([1, 1, 1, 2, 2, 3], 2), ([1], 1), ([5, 3, 1, 1, 1, 3, 5, 73, 1], 3)]
     s = Solution2()
     for nums, k in inputs:
         print(s.topKFrequent(nums, k))
+
+
+if __name__ == "__main__":
+    main()

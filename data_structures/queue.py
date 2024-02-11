@@ -41,7 +41,7 @@ class Queue:
         return result + "None"
 
 
-if __name__ == "__main__":
+def main() -> None:
     queue = Queue()
     queue.enqueue("1")
     queue.enqueue("2")
@@ -50,3 +50,7 @@ if __name__ == "__main__":
     print(queue.peek().value)
     queue.dequeue()
     print(queue)
+
+
+if __name__ == "__main__":
+    main()

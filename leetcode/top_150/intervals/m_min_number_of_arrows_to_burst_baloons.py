@@ -16,7 +16,7 @@ class Solution:
         return arrows
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         [[10, 16], [2, 8], [1, 6], [7, 12]],
         [[1, 2], [3, 4], [5, 6], [7, 8]],
@@ -26,3 +26,7 @@ if __name__ == "__main__":
     s = Solution()
     for points in inputs:
         print(s.findMinArrowShots(points))
+
+
+if __name__ == "__main__":
+    main()

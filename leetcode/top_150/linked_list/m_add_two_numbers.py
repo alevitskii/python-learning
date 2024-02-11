@@ -79,7 +79,7 @@ class Solution3:
         return dummyHead.next
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         (ListNode(2, ListNode(4, (ListNode(3)))), ListNode(5, ListNode(6, ListNode(4)))),
         (ListNode(0), ListNode(0)),
@@ -91,3 +91,7 @@ if __name__ == "__main__":
     s = Solution2()
     for l1, l2 in inputs:
         print(s.addTwoNumbers(l1, l2))
+
+
+if __name__ == "__main__":
+    main()

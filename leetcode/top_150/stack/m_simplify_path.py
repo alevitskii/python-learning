@@ -14,7 +14,7 @@ class Solution:
         return "/" + "/".join(dirOrFiles)
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         "/home/",
         "/../",
@@ -26,3 +26,7 @@ if __name__ == "__main__":
     s = Solution()
     for path in inputs:
         print(s.simplifyPath(path))
+
+
+if __name__ == "__main__":
+    main()

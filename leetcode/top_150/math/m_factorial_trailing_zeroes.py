@@ -10,13 +10,18 @@ class Solution:
         return zeroes
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         # 3,
         # 5,
         # 0,
-        17
+        17,
+        125,
     ]
     s = Solution()
     for n in inputs:
         print(s.trailingZeroes(n))
+
+
+if __name__ == "__main__":
+    main()

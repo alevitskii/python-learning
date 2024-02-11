@@ -32,7 +32,7 @@ class SolutionPostOrder:
         return root
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         TreeNode(
             val=4,
@@ -44,3 +44,7 @@ if __name__ == "__main__":
     s = SolutionPostOrder()
     for root in inputs:
         print(s.invertTree(root))
+
+
+if __name__ == "__main__":
+    main()

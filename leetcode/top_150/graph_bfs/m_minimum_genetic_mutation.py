@@ -32,7 +32,7 @@ class Solution:
         return -1
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ("AACCGGTT", "AACCGGTA", ["AACCGGTA"]),
         ("AACCGGTT", "AAACGGTA", ["AACCGGTA", "AACCGCTA", "AAACGGTA"]),
@@ -41,3 +41,7 @@ if __name__ == "__main__":
     s = Solution()
     for startGene, endGene, bank in inputs:
         print(s.minMutation(startGene, endGene, bank))
+
+
+if __name__ == "__main__":
+    main()

@@ -28,7 +28,7 @@ class Solution:
             insert_index -= 1
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3),  # [1, 2, 2, 3, 5, 6]
     ]
@@ -36,3 +36,7 @@ if __name__ == "__main__":
     for nums1, m, nums2, n in inputs:
         print(s.merge(nums1, m, nums2, n))
         print(nums1)
+
+
+if __name__ == "__main__":
+    main()

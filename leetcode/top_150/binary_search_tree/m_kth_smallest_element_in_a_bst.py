@@ -44,7 +44,7 @@ class Solution2:
         self.inorderTraversal(node.right, k)
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         (TreeNode(val=3, left=TreeNode(val=1, right=TreeNode(val=2)), right=TreeNode(val=4)), 1),
         (
@@ -59,3 +59,7 @@ if __name__ == "__main__":
     s = Solution2()
     for root, k in inputs:
         print(s.kthSmallest(root, k))
+
+
+if __name__ == "__main__":
+    main()

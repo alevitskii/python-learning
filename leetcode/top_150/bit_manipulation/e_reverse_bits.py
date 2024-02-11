@@ -28,7 +28,7 @@ class Solution4:
         return res
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         43261596,
         4294967293,
@@ -36,3 +36,7 @@ if __name__ == "__main__":
     s = Solution4()
     for n in inputs:
         print(s.reverseBits(n))
+
+
+if __name__ == "__main__":
+    main()

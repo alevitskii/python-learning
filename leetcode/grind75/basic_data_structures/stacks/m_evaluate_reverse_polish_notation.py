@@ -21,7 +21,7 @@ class Solution:
         return stack[0]
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ["2", "1", "+", "3", "*"],
         ["4", "13", "5", "/", "+"],
@@ -30,3 +30,7 @@ if __name__ == "__main__":
     s = Solution()
     for tokens in inputs:
         print(s.evalRPN(tokens))
+
+
+if __name__ == "__main__":
+    main()

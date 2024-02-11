@@ -54,7 +54,7 @@ class Solution2:
         return ans
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ("cbaebabacd", "abc"),
         ("abab", "ab"),
@@ -62,3 +62,7 @@ if __name__ == "__main__":
     s = Solution2()
     for string, q in inputs:
         print(s.findAnagrams(string, q))
+
+
+if __name__ == "__main__":
+    main()

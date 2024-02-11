@@ -35,7 +35,7 @@ class Solution:
         return self.merge(self.sortList(head), self.sortList(slow))
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ListNode(4, ListNode(2, ListNode(1, ListNode(3)))),
         ListNode(-1, ListNode(5, ListNode(3, ListNode(4, ListNode(0))))),
@@ -45,3 +45,7 @@ if __name__ == "__main__":
     for head in inputs:
         head = s.sortList(head)
         print(head)
+
+
+if __name__ == "__main__":
+    main()

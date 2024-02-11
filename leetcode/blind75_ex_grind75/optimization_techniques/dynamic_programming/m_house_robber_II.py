@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def rob(self, nums: List[int]) -> int:
+    def rob(self, nums: list[int]) -> int:
         if len(nums) == 1:
             return nums[0]
         rob1, rob2 = 0, 0
@@ -17,7 +14,7 @@ class Solution:
 
 
 class Solution2:
-    def rob(self, nums: List[int]) -> int:
+    def rob(self, nums: list[int]) -> int:
         rob1_x1st, rob2_x1st = 0, 0
         rob1_xlast, rob2_xlast = 0, 0
         for i, n in enumerate(nums):
@@ -28,7 +25,7 @@ class Solution2:
         return max(nums[0], rob2_x1st, rob2_xlast)
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         [2, 3, 2],
         [1, 2, 3, 1],
@@ -40,3 +37,7 @@ if __name__ == "__main__":
     s = Solution2()
     for nums in inputs:
         print(s.rob(nums))
+
+
+if __name__ == "__main__":
+    main()

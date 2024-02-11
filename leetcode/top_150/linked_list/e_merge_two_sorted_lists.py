@@ -32,7 +32,26 @@ class Solution:
         return head
 
 
-if __name__ == "__main__":
+class Solution2:
+    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+        dummy = ListNode()
+        prev = dummy
+        while list1 and list2:
+            if list1.val < list2.val:
+                prev.next = list1
+                list1 = list1.next
+            else:
+                prev.next = list2
+                list2 = list2.next
+            prev = prev.next
+        if list1:
+            prev.next = list1
+        if list2:
+            prev.next = list2
+        return dummy.next
+
+
+def main() -> None:
     node11 = ListNode(1)
     node12 = ListNode(2)
     node13 = ListNode(4)
@@ -44,6 +63,10 @@ if __name__ == "__main__":
     node21.next = node22
     node22.next = node23
     inputs = [(node11, node21)]
-    s = Solution()
+    s = Solution2()
     for head1, head2 in inputs:
         print(s.mergeTwoLists(head1, head2))
+
+
+if __name__ == "__main__":
+    main()

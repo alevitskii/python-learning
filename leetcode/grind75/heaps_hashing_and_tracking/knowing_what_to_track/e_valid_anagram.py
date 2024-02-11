@@ -33,7 +33,7 @@ class Solution2:
         return True
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ("anagram", "nagaram"),
         ("rat", "car"),
@@ -41,3 +41,7 @@ if __name__ == "__main__":
     s = Solution2()
     for string, q in inputs:
         print(s.isAnagram(string, q))
+
+
+if __name__ == "__main__":
+    main()

@@ -18,18 +18,18 @@ class Solution:
 
 
 class Solution2:
-    def swap_char(self, nums, i, j):
-        swap_index = nums.copy()
-        swap_index[i], swap_index[j] = swap_index[j], swap_index[i]
-        return swap_index
+    def swap_num(self, nums, i, j):
+        swapped = nums.copy()
+        swapped[i], swapped[j] = swapped[j], swapped[i]
+        return swapped
 
     def permute_rec(self, nums, current_index, result):
         if current_index == len(nums) - 1:
             result.append(nums)
             return
         for i in range(current_index, len(nums)):
-            swapped_str = self.swap_char(nums, current_index, i)
-            self.permute_rec(swapped_str, current_index + 1, result)
+            swapped = self.swap_num(nums, current_index, i)
+            self.permute_rec(swapped, current_index + 1, result)
 
     def permute(self, nums: List[int]) -> List[List[int]]:
         result = []
@@ -49,8 +49,12 @@ class Solution2:
 # 3.2. Swap 2 and 1, work with 2    -> [3, 1, 2]
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [[1, 2, 3], [0, 1], [1]]
     s = Solution2()
     for nums in inputs:
         print(s.permute(nums))
+
+
+if __name__ == "__main__":
+    main()

@@ -24,9 +24,13 @@ class MyQueue:
         return self.peek() is None
 
 
-if __name__ == "__main__":
+def main() -> None:
     obj = MyQueue()
     print(obj.push(1))
     print(obj.pop())
     print(obj.peek())
     print(obj.empty())
+
+
+if __name__ == "__main__":
+    main()

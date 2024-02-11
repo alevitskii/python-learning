@@ -53,8 +53,12 @@ class Solution2:
         return r
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [3, 58, 1994, 1, 1998, 2000, 3999]
     s = Solution()
     for num in inputs:
         print(s.intToRoman(num))
+
+
+if __name__ == "__main__":
+    main()

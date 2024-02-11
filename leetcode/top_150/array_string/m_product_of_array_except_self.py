@@ -30,8 +30,12 @@ class Solution2:
         return answer
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [[1, 2, 3, 4], [-1, 1, 0, -3, 3], [2, 3, 4, 5, 6, 7], [1], [1, 2, 3]]
     s = Solution2()
     for nums in inputs:
         print(s.productExceptSelf(nums))
+
+
+if __name__ == "__main__":
+    main()

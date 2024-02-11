@@ -4,7 +4,7 @@ class Solution(object):
         right = len(nums) - 1
 
         while left <= right:
-            mid = (left + right) >> 2
+            mid = (left + right) >> 1
 
             if nums[mid] == target:
                 return mid
@@ -16,7 +16,7 @@ class Solution(object):
         return -1
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ([-1, 0, 3, 5, 9, 12], 9),
         ([-1, 0, 3, 5, 9, 12], 2),
@@ -24,3 +24,7 @@ if __name__ == "__main__":
     s = Solution()
     for nums, target in inputs:
         print(s.search(nums, target))
+
+
+if __name__ == "__main__":
+    main()

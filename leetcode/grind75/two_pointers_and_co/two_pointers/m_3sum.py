@@ -65,9 +65,13 @@ class Solution2:
         return res
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [[-1, 0, 1, 2, -1, -4], [0, 1, 1], [0, 0, 0]]
 
     s = Solution()
     for nums in inputs:
         print(s.threeSum(nums))
+
+
+if __name__ == "__main__":
+    main()

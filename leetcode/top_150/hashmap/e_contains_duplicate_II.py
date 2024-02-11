@@ -32,7 +32,7 @@ class Solution2:
         return False
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ([1, 2, 3, 1], 3),
         ([1, 0, 1, 1], 1),
@@ -44,3 +44,7 @@ if __name__ == "__main__":
     s = Solution()
     for nums, k in inputs:
         print(s.containsNearbyDuplicate(nums, k))
+
+
+if __name__ == "__main__":
+    main()

@@ -46,7 +46,7 @@ class Solution3:
         return dp[amount]
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         (5, [1, 2, 5]),
         (3, [2]),
@@ -55,3 +55,7 @@ if __name__ == "__main__":
     s = Solution2()
     for amount, coins in inputs:
         print(s.change(amount, coins))
+
+
+if __name__ == "__main__":
+    main()

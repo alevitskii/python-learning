@@ -25,7 +25,7 @@ class Solution2:
                 return False
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         19,
         2,
@@ -33,3 +33,7 @@ if __name__ == "__main__":
     s = Solution2()
     for n in inputs:
         print(s.isHappy(n))
+
+
+if __name__ == "__main__":
+    main()

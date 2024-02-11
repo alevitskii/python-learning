@@ -20,7 +20,7 @@ class Solution:
         return left or right
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         (
             TreeNode(
@@ -50,3 +50,7 @@ if __name__ == "__main__":
     for root, p, q in inputs:
         node = s.lowestCommonAncestor(root, p, q)
         print()
+
+
+if __name__ == "__main__":
+    main()

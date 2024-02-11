@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+    def merge(self, nums1: list[int], m: int, nums2: list[int], n: int) -> None:
         """
         Do not return anything, modify nums1 in-place instead.
         """
@@ -29,7 +26,7 @@ class Solution:
 
 
 class Solution2:
-    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+    def merge(self, nums1: list[int], m: int, nums2: list[int], n: int) -> None:
         """
         Do not return anything, modify nums1 in-place instead.
         """
@@ -44,14 +41,17 @@ class Solution2:
             else:
                 nums1[p] = nums2[p2]
                 p2 -= 1
-        return nums1
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3),  # [1, 2, 2, 3, 5, 6]
     ]
     s = Solution2()
     for nums1, m, nums2, n in inputs:
-        print(s.merge(nums1, m, nums2, n))
+        s.merge(nums1, m, nums2, n)
         print(nums1)
+
+
+if __name__ == "__main__":
+    main()

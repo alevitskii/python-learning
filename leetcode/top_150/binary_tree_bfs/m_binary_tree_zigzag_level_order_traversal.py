@@ -55,7 +55,7 @@ class Solution2:
         return ans.values()
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         TreeNode(val=3, left=TreeNode(val=9), right=TreeNode(val=20, left=TreeNode(val=15), right=TreeNode(val=7))),
         TreeNode(val=1, left=TreeNode(val=2, left=TreeNode(val=4)), right=TreeNode(val=3, right=TreeNode(val=5))),
@@ -65,3 +65,7 @@ if __name__ == "__main__":
     s = Solution2()
     for root in inputs:
         print(s.zigzagLevelOrder(root))
+
+
+if __name__ == "__main__":
+    main()

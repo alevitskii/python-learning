@@ -13,7 +13,7 @@ class Solution:
         return self.myPow(x, n // 2) * self.myPow(x, n // 2) * self.myPow(x, n % 2)
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         (2.00000, 10),
         (2.10000, 3),
@@ -22,3 +22,7 @@ if __name__ == "__main__":
     s = Solution()
     for x, n in inputs:
         print(s.myPow(x, n))
+
+
+if __name__ == "__main__":
+    main()

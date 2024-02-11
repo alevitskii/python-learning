@@ -22,8 +22,12 @@ def fibonacci_bottom_up(n):
     return result[-1]
 
 
-if __name__ == "__main__":
+def main() -> None:
     fibonacci = fibonacci_wrapper()
     print(fibonacci(10))
 
     print(fibonacci_bottom_up(10))
+
+
+if __name__ == "__main__":
+    main()

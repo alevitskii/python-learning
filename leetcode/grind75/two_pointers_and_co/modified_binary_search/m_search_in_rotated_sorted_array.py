@@ -41,7 +41,7 @@ class Solution2:
         return self.binary_search(nums, 0, len(nums) - 1, target)
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ([4, 5, 6, 7, 0, 1, 2], 0),
         ([4, 5, 6, 7, 0, 1, 2], 3),
@@ -51,3 +51,7 @@ if __name__ == "__main__":
     s = Solution2()
     for nums, target in inputs:
         print(s.search(nums, target))
+
+
+if __name__ == "__main__":
+    main()

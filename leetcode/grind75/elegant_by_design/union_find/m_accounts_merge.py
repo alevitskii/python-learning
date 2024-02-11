@@ -36,7 +36,7 @@ class Solution:
         return final_merged
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         [
             ["John", "johnsmith@mail.com", "john_newyork@mail.com"],
@@ -55,3 +55,7 @@ if __name__ == "__main__":
     s = Solution()
     for accounts in inputs:
         print(s.accountsMerge(accounts))
+
+
+if __name__ == "__main__":
+    main()

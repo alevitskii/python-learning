@@ -52,8 +52,12 @@ class Solution2:
         return max(size)
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [[100, 4, 200, 1, 3, 2], [0, 3, 7, 2, 5, 8, 4, 6, 0, 1], [78, 2, 32, 4, 1, 3], [], [1, 2]]
     s = Solution2()
     for nums in inputs:
         print(s.longestConsecutive(nums))
+
+
+if __name__ == "__main__":
+    main()

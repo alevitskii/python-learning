@@ -64,7 +64,7 @@ class Solution2:
         return "".join(reversed(s))
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ("11", "1"),
         ("1010", "1011"),
@@ -75,3 +75,7 @@ if __name__ == "__main__":
     s = Solution2()
     for a, b in inputs:
         print(s.addBinary(a, b))
+
+
+if __name__ == "__main__":
+    main()

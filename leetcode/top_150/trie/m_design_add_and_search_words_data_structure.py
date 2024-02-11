@@ -38,7 +38,7 @@ class WordDictionary:
         return self.search(word[1:], node.keys[word[0]])
 
 
-if __name__ == "__main__":
+def main() -> None:
     wordDictionary = WordDictionary()
     wordDictionary.addWord("bad")
     wordDictionary.addWord("dad")
@@ -47,3 +47,7 @@ if __name__ == "__main__":
     print(wordDictionary.search("bad"))  # return True
     print(wordDictionary.search(".ad"))  # return True
     print(wordDictionary.search("b.."))  # return True
+
+
+if __name__ == "__main__":
+    main()

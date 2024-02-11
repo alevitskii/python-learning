@@ -17,7 +17,7 @@ class Solution:
         return result
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         [1, 2, 3],
         [0, 1],
@@ -26,3 +26,7 @@ if __name__ == "__main__":
     s = Solution()
     for nums in inputs:
         print(s.permute(nums))
+
+
+if __name__ == "__main__":
+    main()

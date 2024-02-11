@@ -18,8 +18,12 @@ class Solution:
         return length_of_max_substring
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [("ABAB", 2), ("AABABBA", 1)]
     s = Solution()
     for string, k in inputs:
         print(s.characterReplacement(string, k))
+
+
+if __name__ == "__main__":
+    main()

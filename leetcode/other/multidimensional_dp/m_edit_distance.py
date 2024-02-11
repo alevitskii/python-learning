@@ -32,7 +32,7 @@ class Solution2:
         return dp[0][0]
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ("horse", "ros"),
         ("intention", "execution"),
@@ -40,3 +40,7 @@ if __name__ == "__main__":
     s = Solution2()
     for word1, word2 in inputs:
         print(s.minDistance(word1, word2))
+
+
+if __name__ == "__main__":
+    main()

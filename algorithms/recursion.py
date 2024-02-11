@@ -25,9 +25,14 @@ def fibonacci_recursive(n):
     return fibonacci_recursive(n - 1) + fibonacci_recursive(n - 2) if n >= 2 else n
 
 
-if __name__ == "__main__":
+def main() -> None:
+
     # print(find_factorial_recursive(3))
     # print(find_factorial_iterative(3))
 
     print(fibonacci_iterative(10))
     print(fibonacci_recursive(10))
+
+
+if __name__ == "__main__":
+    main()

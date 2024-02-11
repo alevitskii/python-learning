@@ -22,7 +22,7 @@ class Solution:
         return diameter
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         TreeNode(1, left=TreeNode(2, left=TreeNode(4), right=TreeNode(5)), right=TreeNode(3)),
         TreeNode(1, left=TreeNode(2)),
@@ -32,3 +32,7 @@ if __name__ == "__main__":
     s = Solution()
     for root in inputs:
         print(s.diameterOfBinaryTree(root))
+
+
+if __name__ == "__main__":
+    main()

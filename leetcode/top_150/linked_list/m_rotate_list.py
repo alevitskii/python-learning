@@ -72,7 +72,7 @@ class Solution2:
         return answer
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         (ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5))))), 2),
         (ListNode(0, ListNode(1, ListNode(2))), 4),
@@ -82,3 +82,7 @@ if __name__ == "__main__":
     s = Solution()
     for head, k in inputs:
         print(s.rotateRight(head, k))
+
+
+if __name__ == "__main__":
+    main()

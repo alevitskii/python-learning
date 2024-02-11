@@ -56,7 +56,7 @@ class Solution3:
         return [[node.val for node in level] for level in level_order(root)]
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         TreeNode(3, TreeNode(9), TreeNode(20, TreeNode(15), TreeNode(7))),
         TreeNode(1),
@@ -66,3 +66,7 @@ if __name__ == "__main__":
     s = Solution()
     for root in inputs:
         print(s.levelOrder(root))
+
+
+if __name__ == "__main__":
+    main()

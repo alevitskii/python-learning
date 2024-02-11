@@ -29,8 +29,12 @@ class Solution2:
         return right
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [4, 8, 1024, 8192]
     s = Solution()
     for n in inputs:
         print(s.mySqrt(n))
+
+
+if __name__ == "__main__":
+    main()

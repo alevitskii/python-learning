@@ -60,8 +60,12 @@ class Solution4:
         return True
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [[2, 3, 1, 1, 4], [3, 2, 1, 0, 4], [3, 0, 0, 0, 1], [0], [9997] + list(range(9997, -1, -1)) + [0]]
     s = Solution3()
     for nums in inputs:
         print(s.canJump(nums))
+
+
+if __name__ == "__main__":
+    main()

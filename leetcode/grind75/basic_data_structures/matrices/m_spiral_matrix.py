@@ -20,8 +20,12 @@ class Solution:
         return result
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [[[1, 2, 3], [4, 5, 6], [7, 8, 9]], [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]]]
     s = Solution()
     for matrix in inputs:
         print(s.spiralOrder(matrix))
+
+
+if __name__ == "__main__":
+    main()

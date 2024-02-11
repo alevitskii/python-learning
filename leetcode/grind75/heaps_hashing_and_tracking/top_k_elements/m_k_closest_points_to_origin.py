@@ -66,7 +66,7 @@ class SolutionHeap2:
         return [coord for _, *coord in heap]
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ([[1, 3], [-2, 2]], 1),
         ([[3, 3], [5, -1], [-2, 4]], 2),
@@ -90,3 +90,7 @@ if __name__ == "__main__":
     s = SolutionHeap()
     for points, k in inputs:
         print(s.kClosest(points, k))
+
+
+if __name__ == "__main__":
+    main()

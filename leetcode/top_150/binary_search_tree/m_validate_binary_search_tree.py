@@ -22,7 +22,7 @@ class Solution:
         return validate(root, -inf, inf)
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         TreeNode(2, left=TreeNode(1), right=TreeNode(3)),
         TreeNode(5, left=TreeNode(1), right=TreeNode(4, left=TreeNode(3), right=TreeNode(6))),
@@ -31,3 +31,7 @@ if __name__ == "__main__":
     s = Solution()
     for root in inputs:
         print(s.isValidBST(root))
+
+
+if __name__ == "__main__":
+    main()

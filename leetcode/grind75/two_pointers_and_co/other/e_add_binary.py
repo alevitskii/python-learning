@@ -92,7 +92,7 @@ class Solution3:
         return binary_sum
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ("11", "1"),
         ("1010", "1011"),
@@ -101,3 +101,7 @@ if __name__ == "__main__":
     s = Solution3()
     for a, b in inputs:
         print(s.addBinary(a, b))
+
+
+if __name__ == "__main__":
+    main()

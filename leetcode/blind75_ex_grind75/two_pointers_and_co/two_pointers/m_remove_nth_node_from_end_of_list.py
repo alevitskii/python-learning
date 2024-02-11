@@ -1,6 +1,4 @@
-from typing import Optional
-
-
+# type: ignore
 # Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -9,7 +7,7 @@ class ListNode:
 
 
 class Solution:
-    def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
+    def removeNthFromEnd(self, head: ListNode | None, n: int) -> ListNode | None:
         leader = head
         while n:
             leader = leader.next
@@ -23,7 +21,7 @@ class Solution:
         return head
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         (ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5))))), 2),
         (ListNode(1), 1),
@@ -41,3 +39,7 @@ if __name__ == "__main__":
     s = Solution()
     for head, n in inputs:
         print(s.removeNthFromEnd(head, n))
+
+
+if __name__ == "__main__":
+    main()

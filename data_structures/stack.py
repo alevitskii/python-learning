@@ -56,7 +56,7 @@ class StackArray:
         return " --> ".join(self.array)
 
 
-if __name__ == "__main__":
+def main() -> None:
     # stack = Stack()
     # stack.push(1)
     # stack.push(2)
@@ -75,3 +75,7 @@ if __name__ == "__main__":
     stack.pop()
     # stack.pop()
     print(stack)
+
+
+if __name__ == "__main__":
+    main()

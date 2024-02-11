@@ -18,7 +18,7 @@ class Solution:
         return sign * result
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         "42",
         "   -42",
@@ -28,3 +28,7 @@ if __name__ == "__main__":
     s = Solution()
     for string in inputs:
         print(s.myAtoi(string))
+
+
+if __name__ == "__main__":
+    main()

@@ -48,7 +48,7 @@ class Solution2:
         return dummy.next
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         (ListNode(1, ListNode(2, ListNode(4))), ListNode(1, ListNode(3, ListNode(4)))),
         (None, None),
@@ -58,3 +58,7 @@ if __name__ == "__main__":
     s = Solution2()
     for list1, list2 in inputs:
         print(s.mergeTwoLists(list1, list2))
+
+
+if __name__ == "__main__":
+    main()

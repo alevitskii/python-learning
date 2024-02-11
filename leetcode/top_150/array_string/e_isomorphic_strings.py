@@ -18,7 +18,7 @@ class Solution:
         return True
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ("egg", "add"),
         ("foo", "bar"),
@@ -27,3 +27,7 @@ if __name__ == "__main__":
     s = Solution()
     for string, t in inputs:
         print(s.isIsomorphic(string, t))
+
+
+if __name__ == "__main__":
+    main()

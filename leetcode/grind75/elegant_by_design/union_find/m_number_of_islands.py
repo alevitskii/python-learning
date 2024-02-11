@@ -78,7 +78,7 @@ class Solution3:
         return count
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         [["1", "1", "1", "1", "0"], ["1", "1", "0", "1", "0"], ["1", "1", "0", "0", "0"], ["0", "0", "0", "0", "0"]],
         [["1", "1", "0", "0", "0"], ["1", "1", "0", "0", "0"], ["0", "0", "1", "0", "0"], ["0", "0", "0", "1", "1"]],
@@ -86,3 +86,7 @@ if __name__ == "__main__":
     s = Solution3()
     for grid in inputs:
         print(s.numIslands(grid))
+
+
+if __name__ == "__main__":
+    main()

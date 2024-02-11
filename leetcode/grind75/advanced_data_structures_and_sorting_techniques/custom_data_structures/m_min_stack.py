@@ -43,7 +43,7 @@ class MinStack2:
         return self.min_stack[-1]
 
 
-if __name__ == "__main__":
+def main() -> None:
     stack = MinStack2()
     stack.push(1)
     stack.push(2)
@@ -51,3 +51,7 @@ if __name__ == "__main__":
     stack.pop()
     print(stack.top())
     print(stack.getMin())
+
+
+if __name__ == "__main__":
+    main()

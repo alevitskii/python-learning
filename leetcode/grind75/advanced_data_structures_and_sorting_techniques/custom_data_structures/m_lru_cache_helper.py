@@ -112,3 +112,11 @@ class LinkedList:
     # get_head will return the head of the linked list
     def get_head(self):
         return self.head
+
+
+def main() -> None:
+    main()
+
+
+if __name__ == "__main__":
+    main()

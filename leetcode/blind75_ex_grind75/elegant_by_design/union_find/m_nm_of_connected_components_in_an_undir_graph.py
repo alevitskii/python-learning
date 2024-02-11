@@ -1,6 +1,3 @@
-from typing import List
-
-
 class UnionFind:
     # Constructor
     def __init__(self, n):
@@ -43,7 +40,7 @@ class UnionFind:
 
 
 class Solution:
-    def connected(self, n: int, edges: List[List[int]]) -> int:
+    def connected(self, n: int, edges: list[list[int]]) -> int:
         dsu = UnionFind(n)
         res = n
         for x, y in edges:
@@ -52,7 +49,7 @@ class Solution:
         return res
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         (5, [[0, 1], [1, 2], [3, 4]]),
         (8, [[0, 1], [1, 2], [4, 5], [6, 7]]),
@@ -61,3 +58,7 @@ if __name__ == "__main__":
     s = Solution()
     for n, edges in inputs:
         print(s.connected(n, edges))
+
+
+if __name__ == "__main__":
+    main()

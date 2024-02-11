@@ -34,11 +34,15 @@ class Solution:
         return before.next
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         (ListNode(1, ListNode(4, ListNode(3, ListNode(2, ListNode(5, ListNode(2)))))), 3),
-        (ListNode(2, ListNode(1)), 3),
+        (ListNode(2, ListNode(1)), 2),
     ]
     s = Solution()
     for head, x in inputs:
         print(s.partition(head, x))
+
+
+if __name__ == "__main__":
+    main()

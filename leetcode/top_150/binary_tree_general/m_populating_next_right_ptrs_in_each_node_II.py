@@ -33,9 +33,13 @@ class Solution:
         return root
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [Node(val=1, left=Node(val=2, left=Node(4), right=Node(5)), right=Node(val=3, right=Node(7))), None]
     s = Solution()
     for root in inputs:
         root = s.connect(root)
         print(root)
+
+
+if __name__ == "__main__":
+    main()

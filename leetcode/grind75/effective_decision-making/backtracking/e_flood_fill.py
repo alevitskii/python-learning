@@ -34,7 +34,7 @@ class SolutionBFS:
         return image
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ([[1, 1, 1], [1, 1, 0], [1, 0, 1]], 1, 1, 2),
         ([[0, 0, 0], [0, 0, 0]], 0, 0, 0),
@@ -42,3 +42,7 @@ if __name__ == "__main__":
     s = SolutionDFS()
     for image, sr, sc, color in inputs:
         print(s.floodFill(image, sr, sc, color))
+
+
+if __name__ == "__main__":
+    main()

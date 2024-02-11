@@ -13,7 +13,7 @@ class Solution:
             return ~(a ^ mask)
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         (1, 2),
         (2, 3),
@@ -21,3 +21,7 @@ if __name__ == "__main__":
     s = Solution()
     for a, b in inputs:
         print(s.getSum(a, b))
+
+
+if __name__ == "__main__":
+    main()

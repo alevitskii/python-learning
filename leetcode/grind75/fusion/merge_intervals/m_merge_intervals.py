@@ -31,7 +31,7 @@ class Solution2:
         return result
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         [[1, 3], [2, 6], [8, 10], [15, 18]],
         [[1, 4], [4, 5]],
@@ -40,3 +40,7 @@ if __name__ == "__main__":
     s = Solution2()
     for intervals in inputs:
         print(s.merge(intervals))
+
+
+if __name__ == "__main__":
+    main()

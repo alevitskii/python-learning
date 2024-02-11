@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def canJump(self, nums: List[int]) -> bool:
+    def canJump(self, nums: list[int]) -> bool:
         start, start_idx = nums[0], 0
         for i, n in enumerate(nums):
             rem_steps = start + start_idx - i
@@ -14,7 +11,7 @@ class Solution:
 
 
 class Solution2:
-    def canJump(self, nums: List[int]) -> bool:
+    def canJump(self, nums: list[int]) -> bool:
         goal = len(nums) - 1
         for i in range(len(nums) - 2, -1, -1):
             if i + nums[i] >= goal:
@@ -22,7 +19,7 @@ class Solution2:
         return goal == 0
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         [2, 3, 1, 1, 4],
         [3, 2, 1, 0, 4],
@@ -34,3 +31,7 @@ if __name__ == "__main__":
     s = Solution()
     for nums in inputs:
         print(s.canJump(nums))
+
+
+if __name__ == "__main__":
+    main()

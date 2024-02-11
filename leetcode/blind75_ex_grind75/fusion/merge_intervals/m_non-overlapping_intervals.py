@@ -1,9 +1,8 @@
 import heapq
-from typing import List
 
 
 class Solution:
-    def eraseOverlapIntervals(self, intervals: List[List[int]]) -> int:
+    def eraseOverlapIntervals(self, intervals: list[list[int]]) -> int:
         intervals.sort(key=lambda x: x[0])
         heap = []
         heapq.heappush(heap, -intervals[0][1])
@@ -17,7 +16,7 @@ class Solution:
 
 
 class Solution2:
-    def eraseOverlapIntervals(self, intervals: List[List[int]]) -> int:
+    def eraseOverlapIntervals(self, intervals: list[list[int]]) -> int:
         intervals.sort(key=lambda x: x[1])
         end = float("-inf")
         remove = 0
@@ -29,7 +28,7 @@ class Solution2:
         return remove
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         # [[1, 2], [2, 3], [3, 4], [1, 3]],
         # [[1, 2], [1, 2], [1, 2]],
@@ -43,3 +42,7 @@ if __name__ == "__main__":
     s = Solution2()
     for intervals in inputs:
         print(s.eraseOverlapIntervals(intervals))
+
+
+if __name__ == "__main__":
+    main()

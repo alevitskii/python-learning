@@ -1,9 +1,8 @@
 import heapq
-from typing import List
 
 
 class Solution:
-    def meet(self, intervals: List[List[int]]) -> int:
+    def meet(self, intervals: list[list[int]]) -> int:
         if not intervals:
             return 0
         intervals.sort(key=lambda i: i[0])
@@ -19,7 +18,7 @@ class Solution:
 
 
 class Solution2:
-    def meet(self, intervals: List[List[int]]) -> int:
+    def meet(self, intervals: list[list[int]]) -> int:
         if not intervals:
             return 0
         intervals.sort(key=lambda x: x[0])
@@ -32,7 +31,7 @@ class Solution2:
         return len(end_times_heap)
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         # [[10, 50], [20, 100], [40, 60], [60, 91], [70, 95], [90, 120]],
         [[2, 8], [3, 4], [3, 9], [5, 11], [8, 20], [11, 15]],
@@ -44,3 +43,7 @@ if __name__ == "__main__":
     s = Solution()
     for intervals in inputs:
         print(s.meet(intervals))
+
+
+if __name__ == "__main__":
+    main()

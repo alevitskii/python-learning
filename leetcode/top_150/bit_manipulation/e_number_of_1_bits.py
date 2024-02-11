@@ -17,8 +17,12 @@ class Solution2:
         return cnt
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [11, 128, 4294967293]
     s = Solution()
     for n in inputs:
         print(s.hammingWeight(n))
+
+
+if __name__ == "__main__":
+    main()

@@ -30,8 +30,12 @@ class Solution2:
         return longest
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = ["abcabcbb", "bbbbb", "pwwkew", "a", "abc", "cabb", ""]
     s = Solution()
     for string in inputs:
         print(s.lengthOfLongestSubstring(string))
+
+
+if __name__ == "__main__":
+    main()

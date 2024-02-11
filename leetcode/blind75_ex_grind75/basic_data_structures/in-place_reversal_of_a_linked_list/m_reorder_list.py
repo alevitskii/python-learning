@@ -1,15 +1,16 @@
-from typing import Optional, Self
+# type: ignore
+from typing import Self
 
 
 # Definition for singly-linked list.
 class ListNode:
-    def __init__(self, val=0, next: Optional[Self] = None):
+    def __init__(self, val=0, next: Self | None = None):
         self.val = val
         self.next = next
 
 
 class Solution:
-    def reorderList(self, head: Optional[ListNode]) -> None:
+    def reorderList(self, head: ListNode | None) -> None:
         """
         Do not return anything, modify head in-place instead.
         """
@@ -36,7 +37,7 @@ class Solution:
 
 
 class Solution2:
-    def reorderList(self, head: Optional[ListNode]) -> None:
+    def reorderList(self, head: ListNode | None) -> None:
         """
         Do not return anything, modify head in-place instead.
         """
@@ -55,7 +56,7 @@ class Solution2:
             second.next, second = first, second.next
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ListNode(1, ListNode(2, ListNode(3, ListNode(4)))),
         ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5))))),
@@ -64,3 +65,7 @@ if __name__ == "__main__":
     s = Solution()
     for head in inputs:
         print(s.reorderList(head))
+
+
+if __name__ == "__main__":
+    main()

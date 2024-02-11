@@ -44,7 +44,18 @@ class Solution2:
         return 0 if lst > len(nums) else lst
 
 
-if __name__ == "__main__":
+class Solution3:
+    def minSubArrayLen(self, target: int, nums: List[int]) -> int:
+        nums = sorted(nums)
+        acc = 0
+        for i in range(len(nums) - 1, -1, -1):
+            acc += nums[i]
+            if acc >= target:
+                return len(nums) - i
+        return 0
+
+
+def main() -> None:
     inputs = [
         (7, [2, 3, 1, 2, 4, 3]),
         (1, [1, 4, 4]),
@@ -55,3 +66,7 @@ if __name__ == "__main__":
     s = Solution2()
     for target, nums in inputs:
         print(s.minSubArrayLen(target, nums))
+
+
+if __name__ == "__main__":
+    main()

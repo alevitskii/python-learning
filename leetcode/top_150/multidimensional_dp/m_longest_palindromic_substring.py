@@ -62,7 +62,7 @@ class Solution3:
         return max_str
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         "babad",
         "cbbd",
@@ -70,3 +70,7 @@ if __name__ == "__main__":
     s = Solution3()
     for string in inputs:
         print(s.longestPalindrome(string))
+
+
+if __name__ == "__main__":
+    main()

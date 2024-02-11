@@ -47,8 +47,12 @@ class Solution:
         return heap[0]
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [([3, 2, 1, 5, 6, 4], 2), ([3, 2, 3, 1, 2, 4, 5, 5, 6], 4)]
     s = Solution0()
     for nums, k in inputs:
         print(s.findKthLargest(nums, k))
+
+
+if __name__ == "__main__":
+    main()

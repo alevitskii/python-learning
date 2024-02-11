@@ -34,7 +34,7 @@ class Solution:
         return [-1, -1]
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ([5, 7, 7, 8, 8, 10], 8),
         ([5, 7, 7, 8, 8, 10], 3),
@@ -43,3 +43,7 @@ if __name__ == "__main__":
     s = Solution()
     for nums, target in inputs:
         print(s.searchRange(nums, target))
+
+
+if __name__ == "__main__":
+    main()

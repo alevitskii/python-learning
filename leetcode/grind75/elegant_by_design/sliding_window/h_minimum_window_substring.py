@@ -60,7 +60,7 @@ class Solution2:
         return s[left : right + 1] if res_len != float("infinity") else ""
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ("ADOBECODEBANC", "ABC"),
         ("a", "a"),
@@ -69,3 +69,7 @@ if __name__ == "__main__":
     s = Solution2()
     for string, t in inputs:
         print(s.minWindow(string, t))
+
+
+if __name__ == "__main__":
+    main()

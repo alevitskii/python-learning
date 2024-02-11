@@ -26,7 +26,7 @@ class Solution2:
         return dp[0][0]
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         [[1, 3, 1], [1, 5, 1], [4, 2, 1]],
         [[1, 2, 3], [4, 5, 6]],
@@ -34,3 +34,7 @@ if __name__ == "__main__":
     s = Solution2()
     for grid in inputs:
         print(s.minPathSum(grid))
+
+
+if __name__ == "__main__":
+    main()

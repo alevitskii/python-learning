@@ -86,7 +86,7 @@ class Codec2:
         return node
 
 
-if __name__ == "__main__":
+def main() -> None:
     # ([3, 2, 3, 4], [3, 2, 3, 4])
     inputs = [
         TreeNode(1, left=TreeNode(2), right=TreeNode(3, left=TreeNode(4), right=TreeNode(5))),
@@ -97,3 +97,7 @@ if __name__ == "__main__":
     for root in inputs:
         ans = deser.deserialize2(ser.serialize(root))
         print(ans)
+
+
+if __name__ == "__main__":
+    main()

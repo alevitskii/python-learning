@@ -11,7 +11,7 @@ class Solution:
         return dp[0][0]
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ("abcde", "ace"),
         ("abc", "abc"),
@@ -20,3 +20,7 @@ if __name__ == "__main__":
     s = Solution()
     for text1, text2 in inputs:
         print(s.longestCommonSubsequence(text1, text2))
+
+
+if __name__ == "__main__":
+    main()

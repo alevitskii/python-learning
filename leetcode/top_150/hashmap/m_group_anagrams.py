@@ -10,8 +10,12 @@ class Solution:
         return [[strs[i] for i in aidx] for aidx in idxs.values()]
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [["eat", "tea", "tan", "ate", "nat", "bat"], [""], ["a"]]
     s = Solution()
     for strs in inputs:
         print(s.groupAnagrams(strs))
+
+
+if __name__ == "__main__":
+    main()

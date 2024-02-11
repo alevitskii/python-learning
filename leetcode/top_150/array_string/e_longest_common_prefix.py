@@ -28,7 +28,7 @@ class Solution2:
         return prefix
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ["flower", "flow", "flight"],
         ["dog", "racecar", "car"],
@@ -37,3 +37,7 @@ if __name__ == "__main__":
     s = Solution2()
     for strings in inputs:
         print(s.longestCommonPrefix(strings))
+
+
+if __name__ == "__main__":
+    main()

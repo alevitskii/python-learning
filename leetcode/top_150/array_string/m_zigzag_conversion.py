@@ -21,7 +21,7 @@ class Solution:
         return answer
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ("PAYPALISHIRING", 3),
         ("PAYPALISHIRING", 4),
@@ -30,3 +30,7 @@ if __name__ == "__main__":
     s = Solution()
     for string, numRows in inputs:
         print(s.convert(string, numRows))
+
+
+if __name__ == "__main__":
+    main()

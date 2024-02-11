@@ -24,8 +24,12 @@ class Solution:
         return max(dp.values())
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [[[9, 9, 4], [6, 6, 8], [2, 1, 1]], [[3, 4, 5], [3, 2, 6], [2, 2, 1]], [[1]]]
     s = Solution()
     for matrix in inputs:
         print(s.longestIncreasingPath(matrix))
+
+
+if __name__ == "__main__":
+    main()

@@ -9,8 +9,12 @@ class Solution:
         return xor
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [[2, 2, 1], [4, 1, 2, 1, 2], [1]]
     s = Solution()
     for n in inputs:
         print(s.singleNumber(n))
+
+
+if __name__ == "__main__":
+    main()

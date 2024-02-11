@@ -46,7 +46,7 @@ class Solution3:
         return maxSubArray(nums, 0, len(nums) - 1)
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         [-2, 1, -3, 4, -1, 2, 1, -5, 4],
         [1],
@@ -55,3 +55,7 @@ if __name__ == "__main__":
     s = Solution2()
     for nums in inputs:
         print(s.maxSubArray(nums))
+
+
+if __name__ == "__main__":
+    main()

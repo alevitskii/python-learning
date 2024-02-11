@@ -60,7 +60,7 @@ class Solution4:
         return dp[str_len]
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         "12",
         "226",
@@ -70,3 +70,7 @@ if __name__ == "__main__":
     s = Solution3()
     for string in inputs:
         print(s.numDecodings(string))
+
+
+if __name__ == "__main__":
+    main()

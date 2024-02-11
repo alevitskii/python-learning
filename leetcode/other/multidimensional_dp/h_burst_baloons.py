@@ -19,7 +19,7 @@ class Solution:
         return dfs(1, len(nums) - 2)
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         [3, 1, 5, 8],
         [8, 3, 4, 3, 5, 0, 5, 6, 6, 2, 8, 5, 6, 2, 3, 8, 3, 5, 1, 0, 2, 9],
@@ -29,3 +29,7 @@ if __name__ == "__main__":
     s = Solution()
     for nums in inputs:
         print(s.maxCoins(nums))
+
+
+if __name__ == "__main__":
+    main()

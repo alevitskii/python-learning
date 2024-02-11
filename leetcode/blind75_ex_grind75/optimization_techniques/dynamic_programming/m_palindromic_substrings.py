@@ -1,5 +1,5 @@
 class Solution:
-    def countSubstrings(self, s: str) -> str:
+    def countSubstrings(self, s: str) -> int:
         def expand(left, right):
             cnt = 0
             while left >= 0 and right < len(s) and s[left] == s[right]:
@@ -15,7 +15,7 @@ class Solution:
 
 
 class Solution2:
-    def countSubstrings(self, s: str) -> str:
+    def countSubstrings(self, s: str) -> int:
         count = 0
         dp = [[False for i in range(len(s))] for i in range(len(s))]
         for i in range(len(s)):
@@ -33,7 +33,7 @@ class Solution2:
         return count
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         "abc",
         "aaa",
@@ -42,3 +42,7 @@ if __name__ == "__main__":
     s = Solution()
     for string in inputs:
         print(s.countSubstrings(string))
+
+
+if __name__ == "__main__":
+    main()

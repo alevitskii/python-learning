@@ -22,7 +22,7 @@ class Solution:
         return False
 
 
-if __name__ == "__main__":
+def main() -> None:
     node11 = ListNode(3)
     node12 = ListNode(2)
     node13 = ListNode(0)
@@ -43,3 +43,7 @@ if __name__ == "__main__":
     s = Solution()
     for head in inputs:
         print(s.hasCycle(head))
+
+
+if __name__ == "__main__":
+    main()

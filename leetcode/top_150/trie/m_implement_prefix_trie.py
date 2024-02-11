@@ -74,7 +74,7 @@ class PrefixTrie2:
         return False
 
 
-if __name__ == "__main__":
+def main() -> None:
     trie = PrefixTrie()
     trie.insert("apple")
     print(trie.search("dog"))
@@ -94,3 +94,7 @@ if __name__ == "__main__":
     print(trie.search("app"))
     trie.insert("app")
     print(trie.search("app"))
+
+
+if __name__ == "__main__":
+    main()

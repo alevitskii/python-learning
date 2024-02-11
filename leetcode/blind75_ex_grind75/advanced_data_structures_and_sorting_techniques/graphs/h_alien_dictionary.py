@@ -1,9 +1,8 @@
 from collections import Counter, defaultdict, deque
-from typing import List
 
 
 class Solution:
-    def alienDict(self, words: List[str]) -> str:
+    def alienDict(self, words: list[str]) -> str:
         adj_list = defaultdict(set)
         counts = Counter({c: 0 for word in words for c in word})
         outer = 0
@@ -34,7 +33,7 @@ class Solution:
         return "".join(result)
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ["xro", "xma", "per", "prt", "oxh", "olv"],
         ["mdx", "mars", "avgd", "dkae"],
@@ -42,3 +41,7 @@ if __name__ == "__main__":
     s = Solution()
     for words in inputs:
         print(s.alienDict(words))
+
+
+if __name__ == "__main__":
+    main()

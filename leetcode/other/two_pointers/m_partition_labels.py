@@ -15,7 +15,7 @@ class Solution:
         return partitions
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         "ababcbacadefegdehijhklij",
         "eccbbbbdec",
@@ -23,3 +23,7 @@ if __name__ == "__main__":
     s = Solution()
     for string in inputs:
         print(s.partitionLabels(string))
+
+
+if __name__ == "__main__":
+    main()

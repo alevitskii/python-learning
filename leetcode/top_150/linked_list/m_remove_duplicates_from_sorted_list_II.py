@@ -68,14 +68,18 @@ class Solution2:
         return fake.next
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ListNode(1, ListNode(2, ListNode(3, ListNode(3, ListNode(4, ListNode(4, ListNode(5))))))),
         ListNode(1, ListNode(1, ListNode(1, ListNode(2, ListNode(3))))),
-        ListNode(1, ListNode(1, ListNode(3, ListNode(2, ListNode(2))))),
+        ListNode(1, ListNode(1, ListNode(2, ListNode(2, ListNode(3))))),
         ListNode(1),
         None,
     ]
-    s = Solution2()
+    s = Solution()
     for head in inputs:
         print(s.deleteDuplicates(head))
+
+
+if __name__ == "__main__":
+    main()

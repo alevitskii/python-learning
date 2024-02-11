@@ -39,7 +39,7 @@ class Solution3:
         return self.lowestCommonAncestor(root.left, p, q) or self.lowestCommonAncestor(root.right, p, q)
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         (
             TreeNode(
@@ -64,3 +64,7 @@ if __name__ == "__main__":
     s = Solution()
     for root, p, q in inputs:
         print(s.lowestCommonAncestor(root, p, q))
+
+
+if __name__ == "__main__":
+    main()

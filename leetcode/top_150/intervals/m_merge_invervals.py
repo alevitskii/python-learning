@@ -1,9 +1,25 @@
 from collections import defaultdict
-from typing import List
+
+import pytest
+
+
+@pytest.mark.parametrize(
+    ("intervals", "expected"),
+    (
+        ([[1, 3], [2, 6], [8, 10], [15, 18]], [[1, 6], [8, 10], [15, 18]]),
+        ([[1, 4], [4, 5]], [[1, 5]]),
+        ([[1, 4]], [[1, 4]]),
+        ([[1, 4], [5, 5]], [[1, 4], [5, 5]]),
+        ([[1, 4], [0, 4]], [[0, 4]]),
+    ),
+)
+def test_merge(intervals, expected):
+    s = Solution()
+    assert s.merge(intervals) == expected
 
 
 class Solution:
-    def merge(self, intervals: List[List[int]]) -> List[List[int]]:
+    def merge(self, intervals: list[list[int]]) -> list[list[int]]:
         intervals.sort()
         current = intervals[0]
         result = []
@@ -17,18 +33,14 @@ class Solution:
 
 
 class Solution2:
-    def merge(self, intervals: List[List[int]]) -> List[List[int]]:
+    def merge(self, intervals: list[list[int]]) -> list[list[int]]:
         intervals.sort(key=lambda x: x[0])
 
         merged = []
         for interval in intervals:
-            # if the list of merged intervals is empty or if the current
-            # interval does not overlap with the previous, simply append it.
             if not merged or merged[-1][1] < interval[0]:
                 merged.append(interval)
             else:
-                # otherwise, there is overlap, so we merge the current and previous
-                # intervals.
                 merged[-1][1] = max(merged[-1][1], interval[1])
 
         return merged
@@ -81,7 +93,7 @@ class Solution3:
 
         return nodes_in_comp, comp_number
 
-    def merge(self, intervals: List[List[int]]) -> List[List[int]]:
+    def merge(self, intervals: list[list[int]]) -> list[list[int]]:
         graph = self.buildGraph(intervals)
         nodes_in_comp, number_of_comps = self.getComponents(graph, intervals)
 
@@ -89,8 +101,12 @@ class Solution3:
         return [self.mergeNodes(nodes_in_comp[comp]) for comp in range(number_of_comps)]
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [[[1, 3], [2, 6], [8, 10], [15, 18]], [[1, 4], [4, 5]], [[1, 4]], [[1, 4], [5, 5]], [[1, 4], [0, 4]]]
     s = Solution()
     for intervals in inputs:
         print(s.merge(intervals))
+
+
+if __name__ == "__main__":
+    main()

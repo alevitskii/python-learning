@@ -39,3 +39,11 @@ class UnionFind:
     # Function to return the number of conencted components consisting of "1"s
     def get_count(self):
         return self.count
+
+
+def main() -> None:
+    main()
+
+
+if __name__ == "__main__":
+    main()

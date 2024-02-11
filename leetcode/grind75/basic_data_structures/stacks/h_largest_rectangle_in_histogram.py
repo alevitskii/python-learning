@@ -24,7 +24,7 @@ class Solution:
         return max_area
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         [2, 4, 5, 7, 3, 9],
         # [2, 1, 5, 6, 2, 3],
@@ -33,3 +33,7 @@ if __name__ == "__main__":
     s = Solution()
     for heights in inputs:
         print(s.largestRectangleArea(heights))
+
+
+if __name__ == "__main__":
+    main()

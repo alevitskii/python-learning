@@ -23,7 +23,7 @@ class Solution2:
         return idx
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         [1, 1, 1, 2, 2, 3],  # [1, 1, 2, 2, 3, _], 5
         [0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 3, 3],  # [0, 0, 1, 1, 2, 3, 3, _, _], 7
@@ -36,3 +36,7 @@ if __name__ == "__main__":
     for nums in inputs:
         print(s.removeDuplicates(nums))
         print(nums)
+
+
+if __name__ == "__main__":
+    main()

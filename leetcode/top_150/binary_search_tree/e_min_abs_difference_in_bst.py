@@ -30,7 +30,22 @@ class Solution:
         return min_diff
 
 
-if __name__ == "__main__":
+class Solution2:
+    def getMinimumDifference(self, root: Optional[TreeNode]) -> int:
+        def inorder(root):
+            if root is None:
+                return
+            inorder(root.left)
+            nodes.append(root.val)
+            inorder(root.right)
+
+        nodes = []
+        inorder(root)
+        x, y = min(zip(nodes[:-1], nodes[1:]), key=lambda x: abs(x[0] - x[1]))
+        return abs(x - y)
+
+
+def main() -> None:
     inputs = [
         TreeNode(val=4, left=TreeNode(val=2, left=TreeNode(val=1), right=TreeNode(val=3)), right=TreeNode(val=6)),
         TreeNode(val=1, left=TreeNode(val=0), right=TreeNode(val=48, left=TreeNode(val=12), right=TreeNode(val=49))),
@@ -38,6 +53,10 @@ if __name__ == "__main__":
             val=236, left=TreeNode(val=104, right=TreeNode(val=227)), right=TreeNode(val=701, right=TreeNode(val=911))
         ),
     ]
-    s = Solution()
+    s = Solution2()
     for root in inputs:
         print(s.getMinimumDifference(root))
+
+
+if __name__ == "__main__":
+    main()

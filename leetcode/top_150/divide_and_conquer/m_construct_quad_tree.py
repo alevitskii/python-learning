@@ -42,7 +42,7 @@ class Solution:
         return node
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         # [[0, 1],
         #  [1, 0]],
@@ -69,3 +69,7 @@ if __name__ == "__main__":
     for grid in inputs:
         root = s.construct(grid)
         print(root)
+
+
+if __name__ == "__main__":
+    main()

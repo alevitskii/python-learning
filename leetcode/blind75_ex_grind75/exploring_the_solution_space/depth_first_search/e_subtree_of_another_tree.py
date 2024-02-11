@@ -1,6 +1,3 @@
-from typing import Optional
-
-
 # Definition for a binary tree node.
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
@@ -21,7 +18,7 @@ class Solution:
             and self.identical(root.right, subRoot.right)
         )
 
-    def isSubtree(self, root: Optional[TreeNode], subRoot: Optional[TreeNode]) -> bool:
+    def isSubtree(self, root: TreeNode | None, subRoot: TreeNode | None) -> bool:
         if not root:
             return False
         if self.identical(root, subRoot):
@@ -29,7 +26,7 @@ class Solution:
         return self.isSubtree(root.left, subRoot) or self.isSubtree(root.right, subRoot)
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         (
             TreeNode(val=3, left=TreeNode(val=4, left=TreeNode(1), right=TreeNode(2)), right=TreeNode(val=5)),
@@ -59,3 +56,7 @@ if __name__ == "__main__":
     s = Solution()
     for root, subRoot in inputs:
         print(s.isSubtree(root, subRoot))
+
+
+if __name__ == "__main__":
+    main()

@@ -19,7 +19,7 @@ class Solution:
         return -1
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         [1, 2, 3, 1],
         [1, 2, 1, 3, 5, 6, 4],
@@ -28,3 +28,7 @@ if __name__ == "__main__":
     s = Solution()
     for nums in inputs:
         print(s.findPeakElement(nums))
+
+
+if __name__ == "__main__":
+    main()

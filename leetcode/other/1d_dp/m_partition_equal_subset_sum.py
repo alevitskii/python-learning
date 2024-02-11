@@ -19,7 +19,7 @@ class Solution:
         return False
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         [1, 5, 11, 5],
         [1, 2, 3, 5],
@@ -28,3 +28,7 @@ if __name__ == "__main__":
     s = Solution()
     for string in inputs:
         print(s.canPartition(string))
+
+
+if __name__ == "__main__":
+    main()

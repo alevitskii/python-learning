@@ -83,7 +83,7 @@ class BinarySearchTreeMod(BinarySearchTree):
         return True
 
 
-if __name__ == "__main__":
+def main() -> None:
     #       9
     #   4       20
     # 1   6   15   170
@@ -105,3 +105,7 @@ if __name__ == "__main__":
 
     tree.root.right.value = 14
     print(tree.validate())
+
+
+if __name__ == "__main__":
+    main()

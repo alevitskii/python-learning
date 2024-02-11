@@ -31,7 +31,7 @@ class Solution2:
         return dp[amount] if dp[amount] != float("inf") else -1
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ([1, 2, 5], 11),
         ([2], 3),
@@ -40,3 +40,7 @@ if __name__ == "__main__":
     s = Solution2()
     for coins, amount in inputs:
         print(s.coinChange(coins, amount))
+
+
+if __name__ == "__main__":
+    main()

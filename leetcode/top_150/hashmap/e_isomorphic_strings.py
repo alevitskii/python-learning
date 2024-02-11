@@ -20,16 +20,21 @@ class Solution:
 
 class Solution2:
     def isIsomorphic(self, s: str, t: str) -> bool:
-        return [*map(s.index, s)] == [*map(t.index, t)]
+        # [*map(s.index, s)] == [*map(t.index, t)]
+        return list(map(s.index, s)) == list(map(t.index, t))
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ("egg", "add"),
         ("foo", "bar"),
         ("paper", "title"),
         ("qadc", "babt"),
     ]
-    s = Solution()
+    s = Solution2()
     for string, another_string in inputs:
         print(s.isIsomorphic(string, another_string))
+
+
+if __name__ == "__main__":
+    main()

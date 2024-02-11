@@ -15,7 +15,7 @@ class Solution:
         return result
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         (4, 2),
         (1, 1),
@@ -24,3 +24,7 @@ if __name__ == "__main__":
     s = Solution()
     for n, k in inputs:
         print(s.combine(n, k))
+
+
+if __name__ == "__main__":
+    main()

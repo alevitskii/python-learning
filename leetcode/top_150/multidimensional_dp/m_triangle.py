@@ -37,7 +37,7 @@ class Solution3:
         return dfs(0, 0)
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         [[2], [3, 4], [6, 5, 7], [4, 1, 8, 3]],
         [[-10]],
@@ -45,3 +45,7 @@ if __name__ == "__main__":
     s = Solution3()
     for triangle in inputs:
         print(s.minimumTotal(triangle))
+
+
+if __name__ == "__main__":
+    main()

@@ -157,7 +157,7 @@ class Doubly:
         return straight + "\n" + backwards
 
 
-if __name__ == "__main__":
+def main() -> None:
     ll = Singly(1)
     ll.append(2)
     ll.append(3)
@@ -184,3 +184,7 @@ if __name__ == "__main__":
     # print(ll.head.value)
     # print(ll.taill.value)
     # print(ll.length)
+
+
+if __name__ == "__main__":
+    main()

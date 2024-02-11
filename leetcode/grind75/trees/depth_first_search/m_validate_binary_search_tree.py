@@ -57,7 +57,7 @@ class Solution3:
         return validate_bst_helper(root, prev)
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         TreeNode(val=2, left=TreeNode(val=1), right=TreeNode(val=3)),
         TreeNode(val=5, left=TreeNode(val=1), right=TreeNode(val=4, left=TreeNode(3), right=TreeNode(6))),
@@ -65,3 +65,7 @@ if __name__ == "__main__":
     s = Solution3()
     for root in inputs:
         print(s.isValidBST(root))
+
+
+if __name__ == "__main__":
+    main()

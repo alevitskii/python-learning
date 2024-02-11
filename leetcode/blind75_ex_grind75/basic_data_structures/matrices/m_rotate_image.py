@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def rotate(self, matrix: List[List[int]]) -> None:
+    def rotate(self, matrix: list[list[int]]) -> None:
         n = len(matrix)
         for i in range(n):
             for j in range(i, n):
@@ -13,7 +10,7 @@ class Solution:
 
 
 class Solution2:
-    def rotate(self, matrix: List[List[int]]) -> None:
+    def rotate(self, matrix: list[list[int]]) -> None:
         n = len(matrix)
         # Traverse the matrix
         for row in range(n // 2):
@@ -24,10 +21,9 @@ class Solution2:
                 matrix[row][col], matrix[n - 1 - row][n - 1 - col] = matrix[n - 1 - row][n - 1 - col], matrix[row][col]
                 # Swap the top-left and bottom-left cells in the current group
                 matrix[row][col], matrix[n - 1 - col][row] = matrix[n - 1 - col][row], matrix[row][col]
-        return matrix
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         # [[1, 2, 3],
         #  [4, 5, 6],
@@ -37,5 +33,9 @@ if __name__ == "__main__":
     ]
     s = Solution2()
     for matrix in inputs:
-        print(s.rotate(matrix))
+        s.rotate(matrix)
         print(matrix)
+
+
+if __name__ == "__main__":
+    main()

@@ -41,8 +41,12 @@ class Solution2:
         return ans
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = ["III", "LVIII", "MCMXCIV"]
     s = Solution()
     for string in inputs:
         print(s.romanToInt(string))
+
+
+if __name__ == "__main__":
+    main()

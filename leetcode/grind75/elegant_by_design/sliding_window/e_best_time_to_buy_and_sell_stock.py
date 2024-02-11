@@ -36,7 +36,7 @@ class Solution3:
         return maxprofit
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         [7, 1, 5, 3, 6, 4],
         [7, 6, 4, 3, 1],
@@ -44,3 +44,7 @@ if __name__ == "__main__":
     s = Solution()
     for prices in inputs:
         print(s.maxProfit(prices))
+
+
+if __name__ == "__main__":
+    main()

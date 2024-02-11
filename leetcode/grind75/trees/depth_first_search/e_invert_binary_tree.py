@@ -19,7 +19,7 @@ class Solution:
         return root
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         TreeNode(
             4,
@@ -32,3 +32,7 @@ if __name__ == "__main__":
     s = Solution()
     for root in inputs:
         print(s.invertTree(root))
+
+
+if __name__ == "__main__":
+    main()

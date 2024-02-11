@@ -90,9 +90,13 @@ class Solution3:
                 board[i][j] >>= 1  # Shift each cell's value one bit to the right
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [[[0, 1, 0], [0, 0, 1], [1, 1, 1], [0, 0, 0]], [[1, 1], [1, 0]]]
     s = Solution3()
     for board in inputs:
         print(s.gameOfLife(board))
         print(board)
+
+
+if __name__ == "__main__":
+    main()

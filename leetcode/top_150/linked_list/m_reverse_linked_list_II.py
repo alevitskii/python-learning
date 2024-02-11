@@ -38,7 +38,7 @@ class Solution:
         return before_start.next if left == 1 else head
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         (ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5))))), 2, 4),
         (ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5))))), 1, 4),
@@ -49,3 +49,7 @@ if __name__ == "__main__":
     s = Solution()
     for head, left, right in inputs:
         print(s.reverseBetween(head, left, right))
+
+
+if __name__ == "__main__":
+    main()

@@ -54,7 +54,7 @@ class Solution2:
         return dfs(0, 0)
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ("aa", "a"),
         ("aa", "a*"),
@@ -64,3 +64,7 @@ if __name__ == "__main__":
     s = Solution2()
     for string, p in inputs:
         print(s.isMatch(string, p))
+
+
+if __name__ == "__main__":
+    main()

@@ -12,7 +12,7 @@ class Solution:
         return not d
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ("anagram", "nagaram"),
         ("rat", "car"),
@@ -20,3 +20,7 @@ if __name__ == "__main__":
     s = Solution()
     for first, second in inputs:
         print(s.isAnagram(first, second))
+
+
+if __name__ == "__main__":
+    main()

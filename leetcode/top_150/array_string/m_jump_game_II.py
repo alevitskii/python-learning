@@ -29,7 +29,7 @@ class Solution2:
         return jumps
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         [2, 3, 1, 1, 4],
         [2, 3, 0, 1, 4],
@@ -38,3 +38,7 @@ if __name__ == "__main__":
     s = Solution()
     for nums in inputs:
         print(s.jump(nums))
+
+
+if __name__ == "__main__":
+    main()

@@ -34,7 +34,7 @@ class Solution2:
         return dp[target]
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ([2, 3, 6, 7], 7),
         ([2, 3, 5], 8),
@@ -44,3 +44,7 @@ if __name__ == "__main__":
     s = Solution2()
     for candidates, target in inputs:
         print(s.combinationSum(candidates, target))
+
+
+if __name__ == "__main__":
+    main()

@@ -44,7 +44,7 @@ class Solution3:
         return dfs(text1, text2, 0, 0, dp)
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ("abcde", "ace"),
         ("abc", "abc"),
@@ -53,3 +53,7 @@ if __name__ == "__main__":
     s = Solution3()
     for text1, text2 in inputs:
         print(s.longestCommonSubsequence(text1, text2))
+
+
+if __name__ == "__main__":
+    main()

@@ -1,9 +1,8 @@
 from collections import defaultdict
-from typing import List
 
 
 class Solution:
-    def isValidTree(self, n: int, edges: List[List[int]]) -> bool:
+    def isValidTree(self, n: int, edges: list[list[int]]) -> bool:
         if len(edges) != n - 1:
             return False
         adj_list = defaultdict(list)
@@ -21,7 +20,7 @@ class Solution:
         return len(seen) == n
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         (5, [[0, 1], [0, 2], [0, 3], [3, 4]]),
         (5, [[0, 1], [0, 2], [0, 3], [0, 4], [3, 4]]),
@@ -30,3 +29,7 @@ if __name__ == "__main__":
     s = Solution()
     for n, edges in inputs:
         print(s.isValidTree(n, edges))
+
+
+if __name__ == "__main__":
+    main()

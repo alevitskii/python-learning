@@ -37,7 +37,7 @@ class Solution3:
         return cur_not_hold
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         [7, 1, 5, 3, 6, 4],
         [1, 2, 3, 4, 5],
@@ -51,3 +51,7 @@ if __name__ == "__main__":
     s = Solution()
     for prices in inputs:
         print(s.maxProfit(prices))
+
+
+if __name__ == "__main__":
+    main()

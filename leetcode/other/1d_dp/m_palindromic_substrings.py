@@ -14,7 +14,7 @@ class Solution:
         return count
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         "abc",
         "aaa",
@@ -23,3 +23,7 @@ if __name__ == "__main__":
     s = Solution()
     for string in inputs:
         print(s.countSubstrings(string))
+
+
+if __name__ == "__main__":
+    main()

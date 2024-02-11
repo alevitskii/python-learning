@@ -7,10 +7,14 @@ class Solution:
         return prev
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         7,
     ]
     s = Solution()
     for n in inputs:
         print(s.climbStairs(n))
+
+
+if __name__ == "__main__":
+    main()

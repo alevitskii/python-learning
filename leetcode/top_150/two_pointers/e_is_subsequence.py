@@ -37,7 +37,7 @@ class Solution3:
         return True
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ("abc", "ahbgdc"),
         ("aa", "ahbaqc"),
@@ -45,3 +45,7 @@ if __name__ == "__main__":
     s = Solution3()
     for sub, string in inputs:
         print(s.isSubsequence(sub, string))
+
+
+if __name__ == "__main__":
+    main()

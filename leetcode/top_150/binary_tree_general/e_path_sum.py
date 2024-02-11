@@ -18,7 +18,7 @@ class Solution:
         return self.hasPathSum(root.left, targetSum - root.val) or self.hasPathSum(root.right, targetSum - root.val)
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         (
             TreeNode(
@@ -35,3 +35,7 @@ if __name__ == "__main__":
     s = Solution()
     for root, targetSum in inputs:
         print(s.hasPathSum(root, targetSum))
+
+
+if __name__ == "__main__":
+    main()

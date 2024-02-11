@@ -14,7 +14,7 @@ class Solution:
         return max_water
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         [1, 8, 6, 2, 5, 4, 8, 3, 7],
         [1, 1],
@@ -23,3 +23,7 @@ if __name__ == "__main__":
     s = Solution()
     for height in inputs:
         print(s.maxArea(height))
+
+
+if __name__ == "__main__":
+    main()

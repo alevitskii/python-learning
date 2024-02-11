@@ -16,7 +16,7 @@ class Solution:
         return seen_once
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         [2, 2, 3, 2],
         [0, 1, 0, 1, 0, 1, 99],
@@ -24,3 +24,7 @@ if __name__ == "__main__":
     s = Solution()
     for n in inputs:
         print(s.singleNumber(n))
+
+
+if __name__ == "__main__":
+    main()

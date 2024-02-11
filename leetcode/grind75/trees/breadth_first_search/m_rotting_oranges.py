@@ -37,7 +37,7 @@ class Solution:
         return -1 if fresh > 0 else minutes
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         [[2, 1, 1], [1, 1, 0], [0, 1, 1]],
         [[2, 1, 1], [0, 1, 1], [1, 0, 1]],
@@ -46,3 +46,7 @@ if __name__ == "__main__":
     s = Solution()
     for grid in inputs:
         print(s.orangesRotting(grid))
+
+
+if __name__ == "__main__":
+    main()

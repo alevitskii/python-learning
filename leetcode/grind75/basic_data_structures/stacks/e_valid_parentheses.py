@@ -10,26 +10,12 @@ class Solution:
         return not stack
 
 
-class Solution2:
-    def isValid(self, s: str) -> bool:
-        stack = []
-        hashmap = {")": "(", "}": "{", "]": "["}
-        for char in s:
-            if char not in hashmap:
-                stack.append(char)
-            else:
-                if stack:
-                    popped_element = stack.pop()
-                else:
-                    popped_element = "*"
-
-                if hashmap[char] != popped_element:
-                    return False
-        return not stack
+def main() -> None:
+    inputs = ["()", "()[]{}", "(]"]
+    s = Solution()
+    for string in inputs:
+        print(s.isValid(string))
 
 
 if __name__ == "__main__":
-    inputs = ["()", "()[]{}", "(]"]
-    s = Solution2()
-    for string in inputs:
-        print(s.isValid(string))
+    main()

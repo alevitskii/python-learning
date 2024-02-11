@@ -86,7 +86,7 @@ class Solution3:
         return head
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         (ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5))))), 2),
         (ListNode(1), 1),
@@ -104,3 +104,7 @@ if __name__ == "__main__":
     s = Solution()
     for head, n in inputs:
         print(s.removeNthFromEnd(head, n))
+
+
+if __name__ == "__main__":
+    main()

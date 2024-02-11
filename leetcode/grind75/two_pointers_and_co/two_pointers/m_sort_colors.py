@@ -21,7 +21,7 @@ class Solution:
                 blue -= 1
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         [2, 0, 2, 1, 1, 0],
         [2, 0, 1],
@@ -31,3 +31,7 @@ if __name__ == "__main__":
     for nums in inputs:
         s.sortColors(nums)
         print(nums)
+
+
+if __name__ == "__main__":
+    main()

@@ -12,3 +12,11 @@ class UnionFind:
         root_node2 = self.find(node2)
         if root_node1 != root_node2:
             self.parents[root_node2] = root_node1
+
+
+def main() -> None:
+    main()
+
+
+if __name__ == "__main__":
+    main()

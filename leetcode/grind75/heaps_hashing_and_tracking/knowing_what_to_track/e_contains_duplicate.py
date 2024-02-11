@@ -16,7 +16,7 @@ class Solution2:
         return False
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         [1, 2, 3, 1],
         [1, 2, 3, 4],
@@ -25,3 +25,7 @@ if __name__ == "__main__":
     s = Solution2()
     for nums in inputs:
         print(s.containsDuplicate(nums))
+
+
+if __name__ == "__main__":
+    main()

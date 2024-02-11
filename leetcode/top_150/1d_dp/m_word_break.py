@@ -18,7 +18,7 @@ class Solution:
         return check(s, wordDict, {})
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ("leetcode", ["leet", "code"]),
         ("applepenapple", ["apple", "pen"]),
@@ -28,3 +28,7 @@ if __name__ == "__main__":
     s = Solution()
     for string, wordDict in inputs:
         print(s.wordBreak(string, wordDict))
+
+
+if __name__ == "__main__":
+    main()

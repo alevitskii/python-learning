@@ -2,7 +2,7 @@ from typing import List
 
 
 class Solution:
-    def missingNumber(self, nums: List[int]) -> int:
+    def missingNumber(self, nums: list[int]) -> int:
         i = 0
         while i < len(nums):
             if i != nums[i] and nums[i] < len(nums):
@@ -17,7 +17,7 @@ class Solution:
         return len(nums)
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         # [0, 1, 2, 4],
         [3, 0, 1, 4],
@@ -26,3 +26,7 @@ if __name__ == "__main__":
     s = Solution()
     for nums in inputs:
         print(s.missingNumber(nums))
+
+
+if __name__ == "__main__":
+    main()

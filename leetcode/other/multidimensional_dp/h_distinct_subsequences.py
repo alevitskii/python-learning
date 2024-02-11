@@ -17,7 +17,7 @@ class Solution:
         return dfs(0, 0)
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ("rabbbit", "rabbit"),
         ("babgbag", "bag"),
@@ -25,3 +25,7 @@ if __name__ == "__main__":
     s = Solution()
     for string, t in inputs:
         print(s.numDistinct(string, t))
+
+
+if __name__ == "__main__":
+    main()

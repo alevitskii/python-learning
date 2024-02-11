@@ -34,7 +34,7 @@ class Solution2:
         return res
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         [1, 2, 3, 4],
         [-1, 1, 0, -3, 3],
@@ -43,3 +43,7 @@ if __name__ == "__main__":
     s = Solution2()
     for nums in inputs:
         print(s.productExceptSelf(nums))
+
+
+if __name__ == "__main__":
+    main()

@@ -15,7 +15,7 @@ class Solution:
         return left
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ([1, 3, 5, 6], 5),
         ([1, 3, 5, 6], 2),
@@ -25,3 +25,7 @@ if __name__ == "__main__":
     s = Solution()
     for nums, target in inputs:
         print(s.searchInsert(nums, target))
+
+
+if __name__ == "__main__":
+    main()

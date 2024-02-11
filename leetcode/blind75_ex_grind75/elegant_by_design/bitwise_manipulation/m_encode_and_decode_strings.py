@@ -1,6 +1,3 @@
-from typing import List
-
-
 class Solution:
     def length_to_bytes(self, x):
         length = len(x)
@@ -17,13 +14,13 @@ class Solution:
             result = result * 256 + ord(c)
         return result
 
-    def encode(self, strings: List[str]) -> str:
+    def encode(self, strings: list[str]) -> str:
         encoded_string = ""
         for x in strings:
             encoded_string += self.length_to_bytes(x) + x
         return encoded_string
 
-    def decode(self, string: str) -> List[str]:
+    def decode(self, string: str) -> list[str]:
         i = 0
         decoded_string = []
         while i < len(string):
@@ -34,8 +31,12 @@ class Solution:
         return decoded_string
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [["6^Hello_5", "5_World^6"], ["a", "b", "c", "d"]]
     s = Solution()
     for strings in inputs:
         print(s.decode(s.encode(strings)))
+
+
+if __name__ == "__main__":
+    main()

@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def maxProduct(self, nums: List[int]) -> int:
+    def maxProduct(self, nums: list[int]) -> int:
         res = max(nums)
         cur_min, cur_max = 1, 1
         for n in nums:
@@ -14,7 +11,7 @@ class Solution:
 
 
 class Solution2:
-    def maxProduct(self, nums: List[int]) -> int:
+    def maxProduct(self, nums: list[int]) -> int:
         if len(nums) == 0:
             return 0
         max_so_far = nums[0]
@@ -29,8 +26,12 @@ class Solution2:
         return result
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [[2, 3, -2, 4], [-2, 0, -1], [-2, 3, -4]]
     s = Solution()
     for nums in inputs:
         print(s.maxProduct(nums))
+
+
+if __name__ == "__main__":
+    main()

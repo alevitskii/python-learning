@@ -14,7 +14,7 @@ class Solution:
                 right -= 1
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         ([2, 7, 11, 15], 9),
         ([2, 3, 4], 6),
@@ -23,3 +23,7 @@ if __name__ == "__main__":
     s = Solution()
     for numbers, target in inputs:
         print(s.twoSum(numbers, target))
+
+
+if __name__ == "__main__":
+    main()

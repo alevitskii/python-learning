@@ -17,8 +17,12 @@ class Solution2:
         return rob2
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [[1, 2, 3, 1], [2, 7, 9, 3, 1], [2], [1, 2], [2, 1, 1, 2]]
     s = Solution2()
     for nums in inputs:
         print(s.rob(nums))
+
+
+if __name__ == "__main__":
+    main()

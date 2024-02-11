@@ -63,7 +63,7 @@ class Solution3:
         return is_balanced_helper(root) != -1
 
 
-if __name__ == "__main__":
+def main() -> None:
     inputs = [
         TreeNode(2, left=TreeNode(9), right=TreeNode(20, left=TreeNode(15), right=TreeNode(7))),
         TreeNode(
@@ -76,3 +76,7 @@ if __name__ == "__main__":
     s = Solution3()
     for root in inputs:
         print(s.isBalanced(root))
+
+
+if __name__ == "__main__":
+    main()

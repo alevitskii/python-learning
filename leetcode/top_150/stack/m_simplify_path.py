@@ -1,17 +1,22 @@
-from typing import List
+import os.path
 
 
 class Solution:
     def simplifyPath(self, path: str) -> str:
         dirOrFiles = []
-        path = path.split("/")
-        for elem in path:
+        splitted_path = path.split("/")
+        for elem in splitted_path:
             if dirOrFiles and elem == "..":
                 dirOrFiles.pop()
             elif elem not in [".", "", ".."]:
                 dirOrFiles.append(elem)
 
         return "/" + "/".join(dirOrFiles)
+
+
+class Solution2:
+    def simplifyPath(self, path: str) -> str:
+        return os.path.normpath(path)
 
 
 def main() -> None:

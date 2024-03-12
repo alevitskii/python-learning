@@ -35,7 +35,7 @@ def test_both_ruby_and_gem_exist():
 
 
 # Another way is to bypass the cache by accessing __wrapped__ function
-def test_neither_ruby_nor_gem_exist2(clear_lru_cache):
+def test_neither_ruby_nor_gem_exist2():
     with mock.patch.object(shutil, "which", return_value=None):
         assert get_default_version.__wrapped__() == "default"
 

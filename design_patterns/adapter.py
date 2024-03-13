@@ -2,24 +2,24 @@ import random
 from typing import Protocol
 
 
-class DuckProtocol(Protocol):
+class _Duck(Protocol):
     def quack(self) -> None: ...
     def fly(self) -> None: ...
 
 
-class TurkeyProtocol(Protocol):
+class _Turkey(Protocol):
     def gobble(self) -> None: ...
     def fly(self) -> None: ...
 
 
-class DroneProtocol(Protocol):
+class _Drone(Protocol):
     def beep(self) -> None: ...
     def spin_rotors(self) -> None: ...
     def take_off(self) -> None: ...
 
 
 class DuckAdapter:
-    def __init__(self, duck: DuckProtocol) -> None:
+    def __init__(self, duck: _Duck) -> None:
         self.duck = duck
 
     def gobble(self) -> None:
@@ -31,7 +31,7 @@ class DuckAdapter:
 
 
 class TurkeyAdapter:
-    def __init__(self, turkey: TurkeyProtocol) -> None:
+    def __init__(self, turkey: _Turkey) -> None:
         self.turkey = turkey
 
     def quack(self) -> None:
@@ -43,7 +43,7 @@ class TurkeyAdapter:
 
 
 class DroneAdapter:
-    def __init__(self, drone: DroneProtocol) -> None:
+    def __init__(self, drone: _Drone) -> None:
         self.drone = drone
 
     def quack(self) -> None:
@@ -81,7 +81,7 @@ class SuperDrone:
         print("Taking off")
 
 
-def test_duck(duck: DuckProtocol) -> None:
+def test_duck(duck: _Duck) -> None:
     duck.quack()
     duck.fly()
 
@@ -90,7 +90,7 @@ def main() -> None:
     duck = MallardDuck()
 
     turkey = WildTurkey()
-    turkey_adapter: DuckProtocol = TurkeyAdapter(turkey)
+    turkey_adapter: _Duck = TurkeyAdapter(turkey)
 
     print("The Turkey says...")
     turkey.gobble()
@@ -102,14 +102,14 @@ def main() -> None:
     print("\nThe TurkeyAdapter says...")
     test_duck(turkey_adapter)
 
-    duck_adapter: TurkeyProtocol = DuckAdapter(duck)
+    duck_adapter: _Turkey = DuckAdapter(duck)
     for _ in range(10):
         print("The DuckAdapter says...")
         duck_adapter.gobble()
         duck_adapter.fly()
 
     drone = SuperDrone()
-    drone_adapter: DuckProtocol = DroneAdapter(drone)
+    drone_adapter: _Duck = DroneAdapter(drone)
     test_duck(drone_adapter)
 
 

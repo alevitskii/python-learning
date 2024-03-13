@@ -1,7 +1,7 @@
 from typing import Protocol
 
 
-class CommandProtocol(Protocol):
+class _Command(Protocol):
     def execute(self) -> None: ...
     def undo(self) -> None: ...
 
@@ -129,7 +129,7 @@ class HottubOnCommand:
 
 
 class MacroCommand:
-    def __init__(self, commands: list[CommandProtocol]) -> None:
+    def __init__(self, commands: list[_Command]) -> None:
         self.commands = commands
 
     def execute(self) -> None:
@@ -143,11 +143,11 @@ class MacroCommand:
 
 class RemoteControlWithUndo:
     def __init__(self) -> None:
-        self.on_commands: list[CommandProtocol] = [NoCommand() for _ in range(7)]
-        self.off_commands: list[CommandProtocol] = [NoCommand() for _ in range(7)]
-        self.undo_command: CommandProtocol = NoCommand()
+        self.on_commands: list[_Command] = [NoCommand() for _ in range(7)]
+        self.off_commands: list[_Command] = [NoCommand() for _ in range(7)]
+        self.undo_command: _Command = NoCommand()
 
-    def set_command(self, slot: int, on_command: CommandProtocol, off_command: CommandProtocol) -> None:
+    def set_command(self, slot: int, on_command: _Command, off_command: _Command) -> None:
         self.on_commands[slot] = on_command
         self.off_commands[slot] = off_command
 

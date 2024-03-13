@@ -3,7 +3,7 @@ from collections.abc import Sequence
 from typing import Protocol
 
 
-class DoughProtocol(Protocol):
+class _Dough(Protocol):
     def __str__(self) -> str: ...
 
 
@@ -17,7 +17,7 @@ class ThinCrustDough:
         return "Thin Crust Dough"
 
 
-class CheeseProtocol(Protocol):
+class _Cheese(Protocol):
     def __str__(self) -> str: ...
 
 
@@ -31,7 +31,7 @@ class ReggianoCheese:
         return "Reggiano Cheese"
 
 
-class VeggiesProtocol(Protocol):
+class _Veggies(Protocol):
     def __str__(self) -> str: ...
 
 
@@ -45,10 +45,10 @@ class Onion:
         return "Onion"
 
 
-class PizzaIngredientFactoryProtocol(Protocol):
-    def create_dough(self) -> DoughProtocol: ...
-    def create_cheese(self) -> CheeseProtocol: ...
-    def create_veggies(self) -> Sequence[VeggiesProtocol]: ...
+class _PizzaIngredientFactory(Protocol):
+    def create_dough(self) -> _Dough: ...
+    def create_cheese(self) -> _Cheese: ...
+    def create_veggies(self) -> Sequence[_Veggies]: ...
 
 
 class ChicagoPizzaIngredientFactory:
@@ -103,7 +103,7 @@ class Pizza(ABC):
 
 
 class CheesePizza(Pizza):
-    def __init__(self, ingregient_factory: PizzaIngredientFactoryProtocol) -> None:
+    def __init__(self, ingregient_factory: _PizzaIngredientFactory) -> None:
         super().__init__()
         self.ingredient_facrory = ingregient_factory
 
@@ -114,7 +114,7 @@ class CheesePizza(Pizza):
 
 
 class VeggiePizza(Pizza):
-    def __init__(self, ingregient_factory: PizzaIngredientFactoryProtocol) -> None:
+    def __init__(self, ingregient_factory: _PizzaIngredientFactory) -> None:
         super().__init__()
         self.ingredient_facrory = ingregient_factory
 

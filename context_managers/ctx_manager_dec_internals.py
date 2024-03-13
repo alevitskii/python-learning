@@ -78,8 +78,8 @@ def main() -> None:
     print("before ctx")
     with ctx:
         print("boom")
-        raise RuntimeError("wat")
-        # raise StopIteration("wat")
+        # raise RuntimeError("wat")
+        raise StopIteration("wat")
         # raise FooError()
 
 

@@ -3,10 +3,10 @@ from typing import Protocol
 
 
 class MenuItem:
-    def __init__(self, name: str, description: str, vegeterian: bool, price: float) -> None:
+    def __init__(self, name: str, description: str, vegetarian: bool, price: float) -> None:
         self._name = name
         self._desciption = description
-        self._vegeterian = vegeterian
+        self._vegetarian = vegetarian
         self._price = price
 
     @property
@@ -18,21 +18,21 @@ class MenuItem:
         return self._desciption
 
     @property
-    def vegeterian(self) -> bool:
-        return self._vegeterian
+    def vegetarian(self) -> bool:
+        return self._vegetarian
 
     @property
     def price(self) -> float:
         return self._price
 
 
-class MenuProtocol(Protocol):
+class _Menu(Protocol):
     def __iter__(self) -> Iterator: ...
     def __getitem__(self, index: int) -> MenuItem: ...
 
 
 class DinerMenuIterator(Iterator):
-    def __init__(self, menu_items: MenuProtocol) -> None:
+    def __init__(self, menu_items: _Menu) -> None:
         self._menu_items = menu_items
         self._position: int = 0
 
@@ -51,30 +51,30 @@ class PancakeHouseMenu:
         self.add_item(
             name="K&B's Pancake Breakfast",
             description="Pancakes with scrambled eggs, and toast",
-            vegeterian=True,
+            vegetarian=True,
             price=2.99,
         )
         self.add_item(
             name="Regular Pancake Breakfast",
             description="Pancakes with fried eggs, sausage",
-            vegeterian=False,
+            vegetarian=False,
             price=2.99,
         )
         self.add_item(
             name="Blueberry Pancakes",
             description="Pancakes made with fresh blueberries, and blueberry syrup",
-            vegeterian=True,
+            vegetarian=True,
             price=3.49,
         )
         self.add_item(
             name="Waffles",
             description="Waffles, with your choice of blueberries or strawberries",
-            vegeterian=True,
+            vegetarian=True,
             price=3.59,
         )
 
-    def add_item(self, name: str, description: str, vegeterian: bool, price: float) -> None:
-        self._menu_items.append(MenuItem(name=name, description=description, vegeterian=vegeterian, price=price))
+    def add_item(self, name: str, description: str, vegetarian: bool, price: float) -> None:
+        self._menu_items.append(MenuItem(name=name, description=description, vegetarian=vegetarian, price=price))
 
     def __getitem__(self, index: int) -> MenuItem:
         return self._menu_items[index]
@@ -92,39 +92,39 @@ class DinerMenu:
         self.add_item(
             name="Vegetarian BLT",
             description="(Fakin') Bacon with lettuce & tomato on whole wheat",
-            vegeterian=True,
+            vegetarian=True,
             price=2.99,
         )
         self.add_item(
             name="BLT",
             description="Bacon with lettuce & tomato on whole wheat",
-            vegeterian=False,
+            vegetarian=False,
             price=2.99,
         )
         self.add_item(
             name="Soup of the day",
             description="Soup of the day, with a side of potato salad",
-            vegeterian=False,
+            vegetarian=False,
             price=3.29,
         )
         self.add_item(
             name="Steamed Veggies and Brown Rice",
             description="Steamed vegetables over brown rice",
-            vegeterian=True,
+            vegetarian=True,
             price=3.99,
         )
         self.add_item(
             name="Pasta",
             description="Spaghetti with Marinara Sauce, and a slice of sourdough bread",
-            vegeterian=True,
+            vegetarian=True,
             price=3.89,
         )
 
-    def add_item(self, name: str, description: str, vegeterian: bool, price: float) -> None:
+    def add_item(self, name: str, description: str, vegetarian: bool, price: float) -> None:
         if len(self._menu_items) >= self.MAX_ITEMS:
             print("Sorry, menu is full!  Can't add item to menu")
         else:
-            self._menu_items.append(MenuItem(name=name, description=description, vegeterian=vegeterian, price=price))
+            self._menu_items.append(MenuItem(name=name, description=description, vegetarian=vegetarian, price=price))
 
     def __getitem__(self, index: int) -> MenuItem:
         return self._menu_items[index]

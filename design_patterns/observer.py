@@ -1,18 +1,18 @@
 from typing import Protocol
 
 
-class Observable(Protocol):
+class _Observable(Protocol):
     def update(self) -> None: ...
 
 
-class DisplayableAndObservable(Observable, Protocol):
+class _DisplayableAndObservable(_Observable, Protocol):
     def display(self) -> None: ...
 
 
-class SubjectProtocol(Protocol):
-    def register_observer(self, o: DisplayableAndObservable) -> None: ...
+class _Subject(Protocol):
+    def register_observer(self, o: _DisplayableAndObservable) -> None: ...
 
-    def unregister_observer(self, o: DisplayableAndObservable) -> None: ...
+    def unregister_observer(self, o: _DisplayableAndObservable) -> None: ...
 
     def notify_observers(self) -> None: ...
 
@@ -22,7 +22,7 @@ class WeatherData:
         self._temperature: float = 0
         self._humidity: float = 0
         self._pressure: float = 0
-        self._observers: list[DisplayableAndObservable] = []
+        self._observers: list[_DisplayableAndObservable] = []
 
     @property
     def temperature(self) -> float:
@@ -36,10 +36,10 @@ class WeatherData:
     def pressure(self) -> float:
         return self._pressure
 
-    def register_observer(self, o: DisplayableAndObservable) -> None:
+    def register_observer(self, o: _DisplayableAndObservable) -> None:
         self._observers.append(o)
 
-    def unregister_observer(self, o: DisplayableAndObservable) -> None:
+    def unregister_observer(self, o: _DisplayableAndObservable) -> None:
         self._observers.remove(o)
 
     def notify_observers(self) -> None:

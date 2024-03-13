@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 from typing import Protocol
 
 
-class FlyBehavior(Protocol):
+class _FlyBehavior(Protocol):
     def fly(self) -> None: ...
 
 
@@ -21,7 +21,7 @@ class FlyRocketPowered:
         print("I'm flying with a rocket")
 
 
-class QuackBehavior(Protocol):
+class _QuackBehavior(Protocol):
     def quack(self) -> None: ...
 
 
@@ -47,24 +47,24 @@ class FakeQuack:
 
 # not sure about ABC here
 class Duck(ABC):
-    def __init__(self, fly_behavior: FlyBehavior, quack_behavior: QuackBehavior) -> None:
+    def __init__(self, fly_behavior: _FlyBehavior, quack_behavior: _QuackBehavior) -> None:
         self._fly_behavior = fly_behavior
         self._quack_behavior = quack_behavior
 
     @property
-    def fly_behavior(self) -> FlyBehavior:
+    def fly_behavior(self) -> _FlyBehavior:
         return self._fly_behavior
 
     @fly_behavior.setter
-    def fly_behavior(self, fly_behavior: FlyBehavior) -> None:
+    def fly_behavior(self, fly_behavior: _FlyBehavior) -> None:
         self._fly_behavior = fly_behavior
 
     @property
-    def quack_behavior(self) -> QuackBehavior:
+    def quack_behavior(self) -> _QuackBehavior:
         return self._quack_behavior
 
     @quack_behavior.setter
-    def quack_behavior(self, quack_behavior: QuackBehavior) -> None:
+    def quack_behavior(self, quack_behavior: _QuackBehavior) -> None:
         self._quack_behavior = quack_behavior
 
     @abstractmethod

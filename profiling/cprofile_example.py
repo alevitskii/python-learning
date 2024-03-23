@@ -10,6 +10,12 @@ sort cumtime
 stats 10
 """
 
+"""
+graph to view the stats
+pip install yelp-gprof2dot
+grof2dot log.pstats | dot -Tsvg -o log.svg
+"""
+
 
 def main() -> None:
     cProfile.run("[x for x in range(1500)]")

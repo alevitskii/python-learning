@@ -22,7 +22,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-import shlex
 from dataclasses import dataclass
 
 
@@ -54,8 +53,8 @@ def run_command_v2(command: str) -> None:
 
 def run_command_v3(command: str) -> None:
     match command.split():
-        case ["load", filename]:
-            print(f"Loading filename {filename}.")
+        case ["load", filename] as matched:
+            print(f"Loading filename {filename}. Splitted command {matched!r}")
         case ["save", filename]:
             print(f"Saving filename {filename}.")
         case ["quit" | "exit" | "bye", *rest] if "--force" in rest or "-f" in rest:
@@ -96,13 +95,13 @@ def main() -> None:
     """Main function."""
 
     while True:
-        # command = input("$ ")
-        # run_command_v3(command)
+        command = input("$ ")
+        run_command_v3(command)
         # read a command with arguments from the input
-        command, *arguments = shlex.split(input("$ "))
+        # command, *arguments = shlex.split(input("$ "))
 
         # run the command
-        run_command_v4(Command(command, arguments))
+        # run_command_v4(Command(command, arguments))
 
 
 if __name__ == "__main__":

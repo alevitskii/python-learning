@@ -54,7 +54,7 @@ class Piece:
     def promote_to_queen(self) -> None:
         self.type = PieceType.QUEEN
 
-    def __str__(self):
+    def __str__(self) -> str:
         return PIECE_STR[self.type][self.color.value]
 
 

@@ -14,7 +14,7 @@ def is_str_list(val: list[object]) -> TypeGuard[list[str]]:
     return all(isinstance(x, str) for x in val)
 
 
-def func1(val: list[object]):
+def func1(val: list[object]) -> None:
     if is_str_list(val):
         print(" ".join(val))  # Error if "-> bool": invalid type
 

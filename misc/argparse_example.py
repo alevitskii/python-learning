@@ -1,7 +1,7 @@
 # python .\argparse_example.py --help
 import argparse
 import pprint
-from typing import Sequence
+from collections.abc import Sequence
 
 
 def positive_int(s: str) -> int:

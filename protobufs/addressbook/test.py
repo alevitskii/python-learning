@@ -1,5 +1,3 @@
-# protoc --proto_path=protobufs/addressbook/proto --python_out=protobufs/addressbook --pyi_out=protobufs/addressbook .\protobufs\addressbook\proto\addressbook.proto
-
 import addressbook_pb2
 
 person = addressbook_pb2.Person()

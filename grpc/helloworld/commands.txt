@@ -1,0 +1,8 @@
+from one terminal
+`python greeter_server.py`
+
+from another terminal
+`python greeter_client.py`
+
+Generate
+python -m grpc_tools.protoc -Iproto --python_out=. --pyi_out=. --grpc_python_out=. .\proto\helloworld.proto
